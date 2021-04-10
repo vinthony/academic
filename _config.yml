@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Leonid Keselman
+name: Xiaodong Cun
 
 # Short bio or description (displayed in the header)
-# description: the profile of an engineer, researcher and software developer
+description: Ph.D Candidate at University of Macau
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: images/circle_bw_crop.jpg
+avatar: https://vinthony.github.io/academicpages.github.io//images/avatar.jpg
 
 #
 # Flags below are optional
@@ -18,15 +18,15 @@ avatar: images/circle_bw_crop.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: lkeselman@gmail.com
+  email:
   facebook:
   flickr:
-  github: leonidk
-  instagram: leo_nid_k
+  github: vinthony
+  instagram:
   linkedin:
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter:
+  twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -38,25 +38,22 @@ disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
-# excerpt_separator: <!--more-->
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: "https://leonidk.com" # the base hostname & protocol for your site
+url: vinthony.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-#baseurl: ""
+baseurl: ""
 
 #
 # !! You don't need to change any of the configuration flags below !!
 #
 
-#permalink: /:title/
-permalink: /
-
+permalink: /:title/
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
@@ -73,12 +70,12 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :compressed # You might prefer to minify using :compressed
+  style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-plugins:
-      - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-    #  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+gems:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
 # Exclude these files from your production _site
 exclude:
@@ -87,7 +84,3 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-  - command.txt
-  - todo.txt
-  - _temp/index.html
-  - _temp/
