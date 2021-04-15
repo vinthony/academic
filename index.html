@@ -2,11 +2,20 @@
 layout: default
 ---
 
+
 <style type="text/css">
     body{
+        font-weight: 200;
         font-size: 16px;
+        /*background-color: rgb(43, 60, 197);*/
+        /*color: rgb(0, 79, 241);*/
+        /*color: white;*/
+        border-top:5px solid rgb(255, 180, 240);
+        border-bottom:5px solid orange;
     }
-    
+    b{
+      color:rgb(0, 79, 241);
+    }
     .posts{
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 14px;
@@ -16,12 +25,13 @@ layout: default
       line-height: 1.5em;
     }
     .post{
-      border-left: 5px solid rgba(225, 166, 121, 0.5);
+      border-left: 5px solid rgba(0, 79, 241, 0.5);
     }
     .xtitle{
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 24px;
         margin: 10px 0;
+        color: rgb(0, 79, 241);
     }
     
     .posts .teaser{
@@ -43,10 +53,12 @@ layout: default
       right: -0.1em;
       bottom: 0;
       transition:top 200ms cubic-bezier(0, 0.8, 0.13, 1);
-      background-color: rgba(225, 166, 121, 0.5);
+      /*background-color: rgba(225, 166, 121, 0.5);*/
+      background-color: rgba(255,211,30, 0.5);
     }
     .emojilink:after{
-      background-color: rgba(225, 166, 121, 0.0);
+      background-color: rgba(255,211,30, 0.0) 
+      /*rgba(225, 166, 121, 0.0);*/
     }
     a:hover{
       color:orange;
