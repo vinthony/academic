@@ -6,9 +6,9 @@ excerpt: 'TODO.'
 date: 2022-08-04
 year: 2022
 venue: 'ArXiv'
-# arxiv: 0000.00000
-# arxiv_url: https://arxiv.org/abs/todo
-# code: https://github.com/vinthony/todo
+arxiv: 0000.00000
+arxiv_url: https://arxiv.org/abs/todo
+code: https://github.com/vinthony/video-retalking
 teaser: https://via.placeholder.com/150?text=TBD
 authors: Kun Cheng 🧑‍💻, <b>Xiaodong Cun 🧑‍💻📮</b>, <a href='https://yzhang2016.github.io/yongnorriszhang.github.io/'>Yong Zhang</a>, <a href='https://menghanxia.github.io/'>Menghan Xia</a>, Fei Yin, </br> Mingrui Zhu, <a href='https://scholar.google.com.tw/citations?user=h-3xd3EAAAAJ&hl=zh-TW'>Xuan Wang</a>,  <a href="https://juewang725.github.io/">Jue Wang</a>, Nannan Wang
 publication: <b>SIGGRAPH Asia</b> (Conference Track)
