@@ -6,7 +6,7 @@ excerpt: 'TODO.'
 date: 2017-11-01
 year: 2018
 venue: 'ArXiv'
-teaser: https://vinthony.github.io/academicpages.github.io/images/dafrn.png
+teaser: ./images/dafrn.png
 arxiv: '1711.06620'
 arxiv_url: 'https://arxiv.org/abs/1711.06620'
 publication: SIGGRAPH Poster
