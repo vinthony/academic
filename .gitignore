@@ -10,3 +10,4 @@ node_modules
 package.json
 tn/
 favicon.ico
+.jekyll-cache
