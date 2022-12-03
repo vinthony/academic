@@ -35,10 +35,19 @@ layout: default
     }
     
     .posts .teaser{
-        width: 160px;
-        height: 120px;
+      align:center;
+      width: 100%;
+/*      height: 20%;*/
+      overflow: hidden;
+/*        width: 200px;*/
+/*        height: 350px;*/
+        height: 50%;
         float: left;
         margin: 0 0 10px 10px;
+    }
+
+    .teaser-hidden{
+      display: none;
     }
 
     a{
@@ -91,6 +100,16 @@ layout: default
     }
 
 </style>
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+    $('#vis_teaser').on('click', function(){
+        $('.teaser-img').toggleClass('teaser-hidden')
+   });
+});
+</script>
 
 <div>
   
@@ -146,14 +165,14 @@ layout: default
 
 </ul> -->
 
-<div id="Publications" class='xtitle' > Selected Publications <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span> </div> 
+<div id="Publications" class='xtitle' > Selected Publications <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span> <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> <a id="vis_teaser"> Click here to hide Teasers 🔽 </a> </span> </div> 
 
 
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
 
-      <img class= "teaser" src="{{post.teaser}}">
+      <div style="text-align:center;"><img class="teaser-img" src="{{post.teaser}}"> </div>
 
       <div class= "papertitle entry" >{{ post.title }}</div>
 
@@ -190,7 +209,7 @@ layout: default
       <div class="entry">
         
         {% if post.arxiv%}
-        <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a> 
+        <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
         {% endif %}       
         
         {% if post.demo%}
