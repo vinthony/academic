@@ -87,8 +87,8 @@ layout: default
     .posts > .post{
         border-bottom: 0;
         padding-bottom:0em;
-        padding-top: 10px;
-        margin-bottom: 5px;
+/*        padding-top: 10px;*/
+        margin-bottom: 25px;
     }
     .papertitle{
         margin-top: 0px;
@@ -171,6 +171,8 @@ $(function(){
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
+
+      <!-- <div style="position: relative; left:-50px; font-size: 18px;">{{post.year}}</div> -->
 
       <div style="text-align:center;"><img class="teaser-img" src="{{post.teaser}}"> </div>
 
