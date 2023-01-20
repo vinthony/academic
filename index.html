@@ -4,6 +4,9 @@ layout: default
 
 
 <style type="text/css">
+    .container{
+      max-width: 900px !important;
+    }
     body{
         font-weight: 200;
         font-size: 16px;
@@ -44,6 +47,23 @@ layout: default
         height: 50%;
         float: left;
         margin: 0 0 10px 10px;
+    }
+
+    .posts .teaser-left{
+    margin: 0 auto;
+    max-width:300px;
+    max-height:150px;
+    display: block;
+    width: auto;
+    height: auto;
+    }
+
+    .teaser-container{
+    float: left;
+    width: 300px;  
+    height: 150px;
+    margin-right: 20px;  
+    margin-left: 20px;  
     }
 
     .teaser-hidden{
@@ -128,9 +148,9 @@ $(function(){
 
 <div id="Biography" class='xtitle' >Biography</div>
 <div style="text-align: justify;clear: both;">
-         I am currently a research scientist in the Visual Computing Center of <a href="https://ai.tencent.com/ailab/" target="_blank">Tencent AI Lab</a>. Before that, I received my M.S and Ph.D. degrees from the Department of Computer and Information Science, <a target="_blank" href="http://um.edu.mo/">University of Macau</a>, under the supervision of Dr. <a target="_blank" href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun</a> in 2018 and 2021 respectively. And I received my B.Sc degrees in Computer Science from <a target="_blank" href="https://en.xidian.edu.cn/">Xidian University</a>.
-      Currently, I am focusing on the application of deep learning based methods for computational photograpy and image synthesis.<br/>
-      <span style="color: rgb(0, 79, 241);">[We are hiring self-motivated students as research interns, please drop me an email if you are interested.]</span>
+         I am currently a research scientist in the Visual Computing Center of <a href="https://ai.tencent.com/ailab/" target="_blank">Tencent AI Lab</a>. I received my M.S and Ph.D. degrees from the Department of Computer and Information Science, <a target="_blank" href="http://um.edu.mo/">University of Macau</a>, under the supervision of Dr. <a target="_blank" href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun</a> in 2018 and 2021 respectively. I received my B.Sc degree in Computer Science from <a target="_blank" href="https://en.xidian.edu.cn/">Xidian University</a>.
+      Currently, I am working on designing novel applications for image/video generation, translation and editing (<a href='https://zh.m.wikipedia.org/zh-hans/ACG'>especially in the ACG area !!!</a>) using AIGC related techniques. <br/>
+      <span style="color: rgb(0, 79, 241);">[We are always hiring self-motivated students as research interns for ACG-related research topics, please drop me an email if you are interested.]</span>
 </div>
 
 <div id="News" class='xtitle'  >News</div>
@@ -139,10 +159,10 @@ $(function(){
 <li>One paper is conditionally accepted by <b>SIGGRAPH Asia 2022</b> (Conference Track). <div style="float: right;">2022.08 </div> </li>
 <li>Two papers are accepted by <b>ECCV 2022</b>. <div style="float: right;">2022.07 </div> </li>
 <li>One paper is accepted by <b>CVPR 2022</b>. <div style="float: right;">2022.02 </div> </li>
-<li>First day at Tencent AI Lab! <div style="float: right;">2021.09.10 </div> </li>
+<!-- <li>First day at Tencent AI Lab! <div style="float: right;">2021.09.10 </div> </li>
 <li>Ph.D. Oral Defense. <div style="float: right;">2021.06.25 </div> </li>
 <li>One paper is accepted by <b>AAAI-21</b>. <div style="float: right;">2020.12 </div> </li>
-<li>One paper is accepted by <b>ECCV 2020</b>. <div style="float: right;">2020.07 </div> </li>
+<li>One paper is accepted by <b>ECCV 2020</b>. <div style="float: right;">2020.07 </div> </li> -->
 <!-- <li>I will join Huawei Noah's Ark Lab as a research intern. <div style="float: right;">2020.03 </div> </li> -->
 <!-- <li>One paper is accepted by <b>TIP</b>! <div style="float: right;">2020.02 </div> </li> -->
 <!-- <li>One paper is accepted by <b>AAAI-20</b>! <div style="float: right;">2019.11 </div></li> -->
@@ -165,8 +185,10 @@ $(function(){
 
 </ul> -->
 
-<div id="Publications" class='xtitle' > Selected Publications <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span> <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> <a id="vis_teaser"> Click here to hide Teasers 🔽 </a> </span> </div> 
 
+<div id="Publications" class='xtitle' > Selected Publications <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span>  </div> 
+
+<!-- <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> <a id="vis_teaser"> Click here to hide Teasers 🔽 </a> </span> -->
 
 <div class="posts">
   {% for post in site.posts %}
@@ -174,7 +196,11 @@ $(function(){
 
       <!-- <div style="position: relative; left:-50px; font-size: 18px;">{{post.year}}</div> -->
 
-      <div style="text-align:center;"><img class="teaser-img" src="{{post.teaser}}"> </div>
+      <!-- <div style="text-align:center;"><img class="teaser-img" src="{{post.teaser}}"> </div> -->
+
+      <div class= "teaser-container">
+        <img class="teaser-left"  src="{{post.teaser}}">
+      </div>
 
       <div class= "papertitle entry" >{{ post.title }}</div>
 
@@ -189,24 +215,6 @@ $(function(){
             <i>{{post.journal}}</i>, <i>{{post.year}}</i>
           {% endif %}  
       </div>
-
-      <!-- <div class="entry">
-        {% if post.paperurl%}
-      <a class='links' href="{{ post.paperurl }}" rel="paperurl"><img src="https://img.shields.io/badge/Paper-PDF-eb002a?color="></a> 
-      {% endif %} 
-      {% if post.arxiv%}
-      <a class='links' href="{{ post.arxiv_url }}" rel="paperurl"><img src="https://img.shields.io/badge/{{post.arxiv}}-PDF-eb002a?labelColor=141414&logoColor=white&logo=arXiv"></a> 
-      {% endif %}       
-      {% if post.demo%}
-      <a class='links' href="{{ post.demo }}" rel="paperurl"><img src="https://img.shields.io/badge/Demo-orange?labelColor=141414&logoColor=white&label=Google CoLab&logo=Google Cloud"></a> 
-      {% endif %}
-      {% if post.project%}
-      <a class='links' href="{{ post.project }}" rel="paperurl"><img src="https://img.shields.io/badge/Project-eb002a?labelColor=141414&logoColor=white&logo="></a> 
-      {% endif %}
-      {% if post.code%} 
-      <a href="https://github.com/vinthony/{{post.code}}"><img src="https://img.shields.io/github/stars/vinthony/{{ post.code }}.svg?style=flat&logo=github&label=Star&labelColor=141414&logoColor=white&color=0084ff"></a>
-      {% endif %} 
-        </div> -->
 
       <div class="entry">
         

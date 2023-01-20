@@ -11,7 +11,7 @@ arxiv_url: TODO
 code: https://github.com/TODO
 teaser: ./images/coord_fill.png
 authors: Weihuang Liu, <b>Xiaodong Cun 📮</b>,  <a href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun 📮</a>, <a href='https://menghanxia.github.io/'>Menghan Xia</a>, <a href='https://yzhang2016.github.io/yongnorriszhang.github.io/'>Yong Zhang</a>, and <a href="https://juewang725.github.io/">Jue Wang</a>
-publication: AAAI Conference on Artificial Intelligence (<b>AAAI</b>)
+publication: AAAI Conference on Artificial Intelligence (<b>AAAI, Oral</b>)
 # publication: IEEE Trans. on Image Processing (<b>TIP</b>)
 ---
 

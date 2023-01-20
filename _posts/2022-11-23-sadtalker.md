@@ -5,7 +5,7 @@ collection: publications
 permalink: /publication/SadTalker
 excerpt: 'TODO.'
 date: 2022-11-23
-year: 2022
+year: 2023
 venue: 'ArXiv'
 arxiv: 2211.12194
 arxiv_url: https://arxiv.org/abs/2211.12194
