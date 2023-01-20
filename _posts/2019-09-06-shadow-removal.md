@@ -9,7 +9,7 @@ order: 1
 venue: 'ArXiv'
 arxiv: 1911.08718
 arxiv_url: https://arxiv.org/abs/1911.08718
-teaser: https://vinthony.github.io/academicpages.github.io/images/shadow.gif
+teaser: ./images/shadow.gif
 demo: https://colab.research.google.com/drive/1cJ_dsBUXFaFtjoZB9gDYeahjmysnvnTq?usp=sharing
 code: https://github.com/vinthony/ghost-free-shadow-removal
 <!-- project: https://vinthony.github.io/academicpages.github.io/projects/tbd -->
