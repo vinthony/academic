@@ -11,7 +11,7 @@ arxiv_url: https://arxiv.org/abs/2211.14758
 code: https://github.com/vinthony/video-retalking
 project: https://vinthony.github.io/video-retalking/
 teaser: ./images/video-retalking.gif
-authors: Kun Cheng 🧑‍💻, <b>Xiaodong Cun 🧑‍💻📮</b>, <a href='https://yzhang2016.github.io/yongnorriszhang.github.io/'>Yong Zhang</a>, <a href='https://menghanxia.github.io/'>Menghan Xia</a>, Fei Yin, </br> Mingrui Zhu, <a href='https://scholar.google.com.tw/citations?user=h-3xd3EAAAAJ&hl=zh-TW'>Xuan Wang</a>,  <a href="https://juewang725.github.io/">Jue Wang</a>, Nannan Wang
+authors: Kun Cheng 🧑‍💻, <b>Xiaodong Cun 🧑‍💻📮</b>, <a href='https://yzhang2016.github.io/'>Yong Zhang</a>, <a href='https://menghanxia.github.io/'>Menghan Xia</a>, <a href='https://feiiyin.github.io/'>Fei Yin</a>, </br> Mingrui Zhu, <a href='https://xuanwangvc.github.io/'>Xuan Wang</a>,  <a href="https://juewang725.github.io/">Jue Wang</a>, Nannan Wang
 publication: <b>SIGGRAPH Asia</b> (Conference Track)
 ---
 
