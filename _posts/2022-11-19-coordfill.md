@@ -7,6 +7,7 @@ date: 2022-11-19
 year: 2023
 venue: 'ArXiv'
 arxiv: 2303.08524
+is_show: True
 arxiv_url: https://arxiv.org/abs/2303.08524
 code: https://github.com/NiFangBaAGe/CoordFill
 teaser: ./images/coord_fill.png
