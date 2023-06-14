@@ -124,6 +124,9 @@ layout: default
 </style>
 
 <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
 <script type="text/javascript">
 
 $(function(){
@@ -241,11 +244,11 @@ $(function(){
         <a target="_blank" href="{{post.code}}">Github</a>
         {% endif %} 
 
-      <!--   {% if post.code%} 
-        /
-        <a class="no_style" target="_blank" href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code | replace: 'https://github.com/', ''}}?style=social"></a> / 
-        <a class="no_style" target="_blank" href="{{post.code}}"><img src="https://img.shields.io/github/forks/{{post.code | replace: 'https://github.com/', ''}}?style=social"></a>
-        {% endif %}  -->
+        {% if post.code%} 
+        <div style="display: inline-block;float:right">
+        <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a> 
+        </div>
+        {% endif %} 
         <br>
         <i style='display:inline-block;margin-top: 5px'>{{post.highlight_reason}}</i>
 
@@ -319,11 +322,11 @@ $(function(){
         <a target="_blank" href="{{post.code}}">Github</a>
         {% endif %} 
 
-       <!--  {% if post.code%} 
-        /
-        <a class="no_style" target="_blank" href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code | replace: 'https://github.com/', ''}}?style=social"></a> / 
-        <a class="no_style" target="_blank" href="{{post.code}}"><img src="https://img.shields.io/github/forks/{{post.code | replace: 'https://github.com/', ''}}?style=social"></a>
-        {% endif %}  -->
+        {% if post.code%} 
+        <div style="display: inline-block;float:right">
+        <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a> 
+        </div>
+        {% endif %} 
 
         </div>
       <div style ="clear:both"></div>
