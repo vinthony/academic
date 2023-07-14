@@ -99,6 +99,21 @@ layout: default
       /*color: #111;*/
       top:0%;
     }
+    .xcode a:after{
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition:top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+      /*background-color: rgba(225, 166, 121, 0.5);*/
+      background-color: #fff;
+    }
+    .xcode a:hover:after{
+      color: #fff;
+      /*color: #111;*/
+    }
     .entry{
         position: relative;
         top:0;
@@ -246,10 +261,12 @@ $(function(){
         {% endif %} 
 
         {% if post.code%} 
-        <div style="display: inline-block;float:right">
-        <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a> 
+        <div style="display: inline-block;float:right" class="xcode">
+        <!-- <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a>  -->
+          <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
         </div>
         {% endif %} 
+
         <br>
         <i style='display:inline-block;margin-top: 5px'>{{post.highlight_reason}}</i>
 
@@ -324,8 +341,9 @@ $(function(){
         {% endif %} 
 
         {% if post.code%} 
-        <div style="display: inline-block;float:right">
-        <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a> 
+        <div style="display: inline-block;float:right" class="xcode">
+        <!-- <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a>  -->
+        <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
         </div>
         {% endif %} 
 
