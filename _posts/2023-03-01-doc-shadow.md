@@ -10,7 +10,7 @@ venue: 'ArXiv'
 arxiv: 2305.18247
 arxiv_url: https://arxiv.org/abs/2305.18247
 teaser: ./images/docshadow.png
-authors: <a href='https://cxh.netlify.app/'>Xuhang Chen</a>, <b>Xiaodong Cun 📮</b>, <a href='https://zinuoli.github.io/'>Zinuo Li</a>, <a href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun 📮</a>
+authors: <a href='https://zinuoli.github.io/'>Zinuo Li 🧑‍💻</a>, <a href='https://cxh.netlify.app/'>Xuhang Chen 🧑‍💻</a>, <a href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun 📮</a>, <b>Xiaodong Cun 📮</b>
 publication: International Conference on Computer Vision (<b>ICCV</b>)
 ---
 
