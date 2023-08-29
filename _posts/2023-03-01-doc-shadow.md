@@ -10,6 +10,7 @@ venue: 'ArXiv'
 arxiv: 2308.14221
 code: https://github.com/CXH-Research/DocShadow-SD7K
 arxiv_url: https://arxiv.org/abs/2308.14221
+project: https://cxh-research.github.io/DocShadow-SD7K/
 teaser: ./images/docshadow.png
 authors: <a href='https://zinuoli.github.io/'>Zinuo Li 🧑‍💻</a>, <a href='https://cxh.netlify.app/'>Xuhang Chen 🧑‍💻</a>, <a href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun 📮</a>, <b>Xiaodong Cun 📮</b>
 publication: International Conference on Computer Vision (<b>ICCV</b>)
