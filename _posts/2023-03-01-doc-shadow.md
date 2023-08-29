@@ -1,14 +1,15 @@
 ---
-title: "High-resolution Document Shadow Removal via A Large-scale Real-world
-Dataset and A Frequency-aware Shadow Erasing Net"
+title: "High-Resolution Document Shadow Removal via A Large-Scale Real-World
+Dataset and A Frequency-Aware Shadow Erasing Net"
 collection: publications
 permalink: /publication/docshadow
 excerpt: 'TODO.'
 date: 2023-03-01
 year: 2023
 venue: 'ArXiv'
-arxiv: 2305.18247
-arxiv_url: https://arxiv.org/abs/2305.18247
+arxiv: 2308.14221
+code: https://github.com/CXH-Research/DocShadow-SD7K
+arxiv_url: https://arxiv.org/abs/2308.14221
 teaser: ./images/docshadow.png
 authors: <a href='https://zinuoli.github.io/'>Zinuo Li 🧑‍💻</a>, <a href='https://cxh.netlify.app/'>Xuhang Chen 🧑‍💻</a>, <a href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun 📮</a>, <b>Xiaodong Cun 📮</b>
 publication: International Conference on Computer Vision (<b>ICCV</b>)
