@@ -7,7 +7,7 @@ date: 2022-08-04
 year: 2022
 venue: 'ArXiv'
 arxiv: 2211.14758
-is_show: Ture
+highlight: Ture
 arxiv_url: https://arxiv.org/abs/2211.14758
 code: https://github.com/vinthony/video-retalking
 project: https://vinthony.github.io/video-retalking/
