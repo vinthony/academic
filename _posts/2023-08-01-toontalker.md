@@ -8,6 +8,7 @@ year: 2023
 venue: 'ArXiv'
 arxiv: 2308.12866
 arxiv_url: https://arxiv.org/abs/2308.12866
+code: https://github.com/OpenTalker/ToonTalker
 teaser: ./images/toontalker.gif
 authors: <a href='https://github.com/yuanygong'>Yuan Gong</a>, <a href='https://yzhang2016.github.io'>Yong Zhang</a>, <b>Xiaodong Cun</b>, <a href='https://feiiyin.github.io/'>Fei Yin</a>, <a href='https://sites.google.com/site/yanbofan0124/'>Yanbo Fan</a>, <a href='https://xuanwangvc.github.io/'>Xuan Wang</a>, Baoyuan Wu, and Yujiu Yang
 publication: International Conference on Computer Vision (<b>ICCV</b>)
