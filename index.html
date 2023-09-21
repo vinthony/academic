@@ -36,7 +36,7 @@ layout: default
         margin: 10px 0;
         color: rgb(0, 79, 241);
     }
-    
+
     .posts .teaser{
       align:center;
       width: 100%;
@@ -60,11 +60,11 @@ layout: default
 
     .teaser-container{
     float: left;
-    width: 300px;  
+    width: 300px;
     height: 180px;
 
-    margin-right: 20px;  
-    margin-left: 20px;  
+    margin-right: 20px;
+    margin-left: 20px;
     }
 
     .post-hidden{
@@ -88,7 +88,7 @@ layout: default
     }
 
     .emojilink:after{
-      background-color: rgba(255,211,30, 0.0) 
+      background-color: rgba(255,211,30, 0.0)
       /*rgba(225, 166, 121, 0.0);*/
     }
     a:hover{
@@ -152,16 +152,16 @@ $(function(){
 </script>
 
 <div>
-  
+
 <img style="width: 100px;float: left;" src="images/freeview_xiaodong.gif">
 
 <div style="position: relative; left:20px;">
 <div style="font-size:24px;font-weight: 300">Xiaodong Cun（寸晓东）</div>
 <div>Researcher</div>
 <div>Tencent AI Lab</div>
-<a href="mailto:vinthony@gmail.com">Email</a> / <a target="_blank" href="https://scholar.google.com/citations?user=p42qwXcAAAAJ">Google Scholar</a> / <a target="_blank" href="https://github.com/vinthony">Github</a> / <a target="_blank" href="https://www.zhihu.com/people/vinthony">ZhiHu</a> / 
+<a href="mailto:vinthony@gmail.com">Email</a> / <a target="_blank" href="https://scholar.google.com/citations?user=p42qwXcAAAAJ">Google Scholar</a> / <a target="_blank" href="https://github.com/vinthony">Github</a> / <a target="_blank" href="https://www.zhihu.com/people/vinthony">ZhiHu</a> /
 <a target="_blank" href="./images/resume.pdf">CV</a> / <span class="xcode"> Designer, P.M., Engineer of <a href="https://discord.gg/rrayYqZ4tf"><img style="vertical-align:sub;" src="https://dcbadge.vercel.app/api/server/rrayYqZ4tf?style=flat" /></a> . </span>
-  
+
 </div>
 
 </div>
@@ -177,11 +177,12 @@ $(function(){
 </div>
 
 <div style="text-align: justify;clear: both;">
-  
+
 </div>
 
 <div id="News" class='xtitle'  >News</div>
 <ul class="news" style="line-height: 2em">
+<li>1 paper is accepted by <b>NeurIPS 2023</b>. <div style="float: right;">2023.09 </div> </li>
 <li>1 paper is conditionally accepted by <b>SIGGRAPH Asia 2023</b> (Conference Track). <div style="float: right;">2023.08 </div> </li>
 <li>4 papers (4/5) are accepted by <b>ICCV-23</b>. <div style="float: right;">2023.07 </div> </li>
 <li>6 papers (6/7) are accepted by <b>CVPR-23</b>. <div style="float: right;">2023.02 </div> </li>
@@ -205,7 +206,7 @@ $(function(){
 </ul> -->
 
 
-<div id="Publications" class='xtitle' > Research with High Community Influence <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (Citation + Github Star > 1k) </span> </div> 
+<div id="Publications" class='xtitle' > Research with High Community Influence <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (Citation + Github Star > 1k) </span> </div>
 
 
 <div class="posts">
@@ -213,7 +214,7 @@ $(function(){
 
     {% if post.highlight %}
     <article class="post">
- 
+
       <!-- <div style="position: relative; left:-50px; font-size: 18px;">{{post.year}}</div> -->
 
       <!-- <div style="text-align:center;"><img class="teaser-img" src="{{post.teaser}}"> </div> -->
@@ -233,36 +234,36 @@ $(function(){
           {% if post.journal%}
            /
             <i>{{post.journal}}</i>, <i>{{post.year}}</i>
-          {% endif %}  
+          {% endif %}
       </div>
 
       <div class="entry">
-        
+
         {% if post.arxiv%}
         <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
-        {% endif %}       
-        
+        {% endif %}
+
         {% if post.demo%}
         /
-        <a class='links' target="_blank" href="{{ post.demo }}" rel="paperurl">Online Demo</a> 
+        <a class='links' target="_blank" href="{{ post.demo }}" rel="paperurl">Online Demo</a>
         {% endif %}
 
         {% if post.project%}
         /
-        <a class='links' target="_blank" href="{{ post.project }}" rel="paperurl">Project Page</a> 
+        <a class='links' target="_blank" href="{{ post.project }}" rel="paperurl">Project Page</a>
         {% endif %}
-        
-        {% if post.code%} 
+
+        {% if post.code%}
         /
         <a target="_blank" href="{{post.code}}">Github</a>
-        {% endif %} 
+        {% endif %}
 
-        {% if post.code%} 
+        {% if post.code%}
         <div style="display: inline-block;float:right" class="xcode">
         <!-- <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a>  -->
           <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
         </div>
-        {% endif %} 
+        {% endif %}
 
         <br>
         <i style='display:inline-block;margin-top: 5px'>{{post.highlight_reason}}</i>
@@ -275,7 +276,7 @@ $(function(){
   {% endfor %}
 </div>
 
-<div id="Publications" class='xtitle' > Selected Publications <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span> <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> <a id="vis_teaser"> Clike to Show All 🔽 </a> </span> </div> 
+<div id="Publications" class='xtitle' > Selected Publications <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span> <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> <a id="vis_teaser"> Clike to Show All 🔽 </a> </span> </div>
 
 
 <div class="posts">
@@ -283,7 +284,7 @@ $(function(){
 
     {% if post.is_show %}
     <article class="post">
- 
+
     {% else %}
     <article class="post unimportant post-hidden">
 
@@ -308,41 +309,41 @@ $(function(){
           {% if post.journal%}
            /
             <i>{{post.journal}}</i>, <i>{{post.year}}</i>
-          {% endif %}  
+          {% endif %}
       </div>
 
       <div class="entry">
-        
+
         {% if post.arxiv%}
         <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
-        {% endif %}       
+        {% endif %}
 
         {% if post.extented_url%}
         /
         <a class='links' target="_blank" href="{{ post.extented_url }}" rel="paperurl">Extended Version</a>
-        {% endif %}       
-        
+        {% endif %}
+
         {% if post.demo%}
         /
-        <a class='links' target="_blank" href="{{ post.demo }}" rel="paperurl">Online Demo</a> 
+        <a class='links' target="_blank" href="{{ post.demo }}" rel="paperurl">Online Demo</a>
         {% endif %}
 
         {% if post.project%}
         /
-        <a class='links' target="_blank" href="{{ post.project }}" rel="paperurl">Project Page</a> 
+        <a class='links' target="_blank" href="{{ post.project }}" rel="paperurl">Project Page</a>
         {% endif %}
-        
-        {% if post.code%} 
+
+        {% if post.code%}
         /
         <a target="_blank" href="{{post.code}}">Github</a>
-        {% endif %} 
+        {% endif %}
 
-        {% if post.code%} 
+        {% if post.code%}
         <div style="display: inline-block;float:right" class="xcode">
         <!-- <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a>  -->
         <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
         </div>
-        {% endif %} 
+        {% endif %}
 
         </div>
       <div style ="clear:both"></div>
