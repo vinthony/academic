@@ -75,7 +75,8 @@ layout: default
       color: #111;
       position: relative;
     }
-    a:after{
+
+    .user-info a:after{
       content: '';
       position: absolute;
       top: 60%;
@@ -85,6 +86,10 @@ layout: default
       transition:top 200ms cubic-bezier(0, 0.8, 0.13, 1);
       /*background-color: rgba(225, 166, 121, 0.5);*/
       background-color: rgba(255,211,30, 0.5);
+    }
+
+    .authors-entry a {
+      color: #666
     }
 
     .emojilink:after{
@@ -151,7 +156,7 @@ $(function(){
 });
 </script>
 
-<div>
+<div class='user-info'>
 
 <img style="width: 100px;float: left;" src="images/freeview_xiaodong.gif">
 
@@ -168,7 +173,7 @@ $(function(){
 
 
 <div id="Biography" class='xtitle'>Biography</div>
-<div style="text-align: justify;clear: both;">
+<div style="text-align: justify;clear: both;" class="user-info">
          I am currently a researcher in the Visual Computing Center of <a href="https://ai.tencent.com/ailab/" target="_blank">Tencent AI Lab</a>. I received my M.S and Ph.D. degrees from the Department of Computer and Information Science, <a target="_blank" href="http://um.edu.mo/">University of Macau</a>, under the supervision of Dr. <a target="_blank" href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun</a> in 2018 and 2021 respectively. I received my B.Sc degree in Computer Science from <a target="_blank" href="https://en.xidian.edu.cn/">Xidian University</a>.
       Currently, I am working on designing novel applications for image/video generation, translation and editing (<a href='https://zh.m.wikipedia.org/zh-hans/ACG'>especially in the ACG area !!!</a>) using AIGC related techniques. <br/>
       <span style="color: rgb(0, 79, 241);">[We are always hiring self-motivated students as research interns for AIGC-related research topics, please drop me an email if you are interested.]</span>
@@ -225,7 +230,7 @@ $(function(){
 
       <div class= "papertitle entry" >{{ post.title }}</div>
 
-      <div class="entry">
+      <div class="entry authors-entry">
         {{ post.authors }}
       </div>
 
@@ -237,7 +242,7 @@ $(function(){
           {% endif %}
       </div>
 
-      <div class="entry">
+      <div class="entry user-info">
 
         {% if post.arxiv%}
         <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
@@ -300,7 +305,7 @@ $(function(){
 
       <div class= "papertitle entry" >{{ post.title }}</div>
 
-      <div class="entry">
+      <div class="entry authors-entry">
         {{ post.authors }}
       </div>
 
@@ -312,7 +317,7 @@ $(function(){
           {% endif %}
       </div>
 
-      <div class="entry">
+      <div class="entry user-info">
 
         {% if post.arxiv%}
         <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
@@ -340,7 +345,6 @@ $(function(){
 
         {% if post.code%}
         <div style="display: inline-block;float:right" class="xcode">
-        <!-- <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a>  -->
         <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
         </div>
         {% endif %}
