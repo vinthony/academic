@@ -4,7 +4,7 @@ Single Image Talking Face Animation"
 collection: publications
 permalink: /publication/SadTalker
 excerpt: 'TODO.'
-date: 2022-11-23
+date: 2023-11-15
 year: 2023
 venue: 'ArXiv'
 arxiv: 2211.12194
