@@ -6,8 +6,8 @@ excerpt: 'TODO.'
 date: 2023-12-01
 year: 2023
 venue: 'ArXiv'
-arxiv: 2304.01186
-arxiv_url: https://arxiv.org/abs/2304.01186
+arxiv: 2312.03047
+arxiv_url: https://arxiv.org/abs/2312.03047
 code: https://github.com/mayuelala/MagicStick
 project: https://magic-stick-edit.github.io/
 teaser: ./images/magicstick.gif
