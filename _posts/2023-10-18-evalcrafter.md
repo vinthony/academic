@@ -3,7 +3,7 @@ title: "EvalCrafter: Benchmarking and Evaluating Large Video Generation Models"
 collection: publications
 permalink: /publication/EvalCrafter
 excerpt: 'TODO'
-date: 2023-10-18
+date: 2023-12-18
 year: 2024
 venue: 'ArXiv'
 arxiv: 2310.11440
