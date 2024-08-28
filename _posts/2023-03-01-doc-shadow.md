@@ -8,6 +8,7 @@ date: 2023-03-01
 year: 2023
 venue: 'ArXiv'
 arxiv: 2308.14221
+is_show: Ture
 code: https://github.com/CXH-Research/DocShadow-SD7K
 arxiv_url: https://arxiv.org/abs/2308.14221
 project: https://cxh-research.github.io/DocShadow-SD7K/
