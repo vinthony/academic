@@ -8,6 +8,7 @@ year: 2025
 venue: 'ArXiv'
 arxiv: 2412.15646
 is_show: Ture
+arxiv_url: https://arxiv.org/abs/2412.15646
 code: https://github.com/RongPiKing/CustomTTT
 project: https://customttt.github.io/
 teaser: ./images/customttt.gif
