@@ -232,7 +232,10 @@ Email (cun AT gbu.edu.cn)  / <a target="_blank" href="https://scholar.google.com
   <img src="images/ai-lab.jpg" height="63px"/>&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/huawei_noah.jpeg" height="63px"/>
 
 
-<div id="Publications" class='xtitle' > Research Highlight </div>
+<div id="Publications" class='xtitle' > Research Highlight 
+  <a style="font-size: 14px; font-family: Helvetica, Arial, sans-serif;" href="https://gvclab.github.io/research/" >[Full Publications] </a> 
+  <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span>
+</div>
 <div class="posts">
   {% for post in site.posts %}
 
@@ -300,93 +303,19 @@ Email (cun AT gbu.edu.cn)  / <a target="_blank" href="https://scholar.google.com
   {% endfor %}
 </div>
 
-<div id="Publications" class='xtitle' > Selected Publications <a style="font-size: 14px; font-family: Helvetica, Arial, sans-serif;" href="https://scholar.google.com/citations?user=p42qwXcAAAAJ" >[Full Publications] </a> <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span>
-  <!-- <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> <a id="vis_teaser"> Click to Toggle All Publications 🔽 </a> </span>  -->
-
-</div>
-<div class="posts">
-  {% for post in site.posts %}
-
-    {% if post.is_show %}
-        {% if post.highlight != None %}
-          <!-- <article class="post unimportant post-hidden"> -->
-        {% else %}
-          <article class="post">
-        {% endif %}
-    {% else %}
-      <article class="post unimportant post-hidden">
-    {% endif %}
-
-
-      <!-- <div style="position: relative; left:-50px; font-size: 18px;">{{post.year}}</div> -->
-
-      <!-- <div style="text-align:center;"><img class="teaser-img" src="{{post.teaser}}"> </div> -->
-
-      <div class= "teaser-container">
-        <img class="teaser-left"  src="{{post.teaser}}">
-      </div>
-
-      <div class= "papertitle entry" >{{ post.title }}</div>
-
-      <div class="entry authors-entry">
-        {{ post.authors }}
-      </div>
-
-      <div class="entry">
-          <i>{{post.publication}}</i>, <i>{{post.year}}</i>
-          {% if post.journal%}
-           /
-            <i>{{post.journal}}</i>, <i>{{post.year}}</i>
-          {% endif %}
-      </div>
-
-      <div class="entry user-info">
-
-        {% if post.arxiv%}
-        <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
-        {% endif %}
-
-        {% if post.extented_url%}
-        /
-        <a class='links' target="_blank" href="{{ post.extented_url }}" rel="paperurl">Extended Version</a>
-        {% endif %}
-
-        {% if post.demo%}
-        /
-        <a class='links' target="_blank" href="{{ post.demo }}" rel="paperurl">Online Demo</a>
-        {% endif %}
-
-        {% if post.project%}
-        /
-        <a class='links' target="_blank" href="{{ post.project }}" rel="paperurl">Project Page</a>
-        {% endif %}
-
-        {% if post.code%}
-        /
-        <a target="_blank" href="{{post.code}}">Github</a>
-        {% endif %}
-
-        {% if post.code%}
-        <div style="display: inline-block;float:right" class="xcode">
-        <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
-        </div>
-        {% endif %}
-
-        </div>
-      <div style ="clear:both"></div>
-      <!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a> -->
-    </article>
-  {% endfor %}
-</div>
-
-
 <div id="Misc" class='xtitle' >Talks</div>
 <ul style='line-height: 2em; margin-top:0px'>
-<li> 2023.9.30. Applications of AIGC, Kwai (Kuaishou) Technology. Hosted by Dr. <a href="https://www.xtao.website/"> Xin Tao</a>. </li>
-<li> 2023.6.30. AIGC related Applications, HIT SZ. Hosted by <a href="https://sunbowliu.github.io/">Prof. Xuebo Liu</a>.  </li>
-<li> 2023.6.16. <a href="https://www.fst.um.edu.mo/event/unlocking-the-ability-of-large-text-to-image-model-new-applications-and-new-opportunities/">Unlocking the ability of large text-to-image model: new applications and new opportunities</a>, University of Macau. Hosted by <a href="https://www.cis.um.edu.mo/~cmpun/">Prof. Chi-Man Pun</a>. </li>
+<li> 2025.08.21, <a href="https://mp.weixin.qq.com/s/hv8I38-EGhh1kRAfxybE5A"> Acceleration of Video Diffusion Model</a>,VIVO VCAN Talk.  </li>
+<li> 2025.08.16, <a href="https://www.fst.um.edu.mo/event/the-magic-of-video-diffusion-model-from-cinemagraph-to-short-story-generation/">The Magic of Video Diffusion Model: from cinemagraph to Short Story Generation</a>, University of Macau.  </li>
+<li> 2025.08.07, Towards Cinematic Video Generation, Tencent ARC Lab.  </li>
+<li> 2025.07, GBU AI Talk.  </li>
+<li> 2025.05.30, Video Animation and Relighting, VIVO Blue Talk. </li>
+<li> 2023.9.30, Applications of AIGC, Kwai (Kuaishou) Technology. Hosted by Dr. <a href="https://www.xtao.website/"> Xin Tao</a>. </li>
+<li> 2023.6.30, AIGC related Applications, HIT SZ. Hosted by <a href="https://sunbowliu.github.io/">Prof. Xuebo Liu</a>.  </li>
+<li> 2023.6.16, <a href="https://www.fst.um.edu.mo/event/unlocking-the-ability-of-large-text-to-image-model-new-applications-and-new-opportunities/">Unlocking the ability of large text-to-image model: new applications and new opportunities</a>, University of Macau. Hosted by <a href="https://www.cis.um.edu.mo/~cmpun/">Prof. Chi-Man Pun</a>. </li>
 </ul>
 
+<!-- 
 <div id="Academic Services" class='xtitle' > Previous Interns <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> ( * indicate their first top-tier paper through cooperation ) </span> </div>
 <ul style='line-height: 2em;  margin-top:0px' >
 <li> <a href="https://zhendongwang6.github.io/">Zhendong Wang*</a> (2020/21), HIT(SZ). Co-Supervised w/ <a href="https://people.ucas.ac.cn/~jzliu?language=en">Prof. Jianzhuang Liu</a> @ Huawei Noah's Ark Lab  (<b>CVPR 2022</b>) </li>
@@ -402,7 +331,7 @@ Email (cun AT gbu.edu.cn)  / <a target="_blank" href="https://scholar.google.com
 <li> <a href="https://mayuelala.github.io/">Yue Ma</a> (2022.12 - 2023.10), Master@Tsinghua University ➡️ Ph.D@HKUST (<b>AAAI 2024, WACV 2024</b>) </li>
 <li> Yudian Zheng* (2023.07 - Now), Master@Saarland University ➡️ Ph.D@University of Macau (<b>Eurographics 2024</b>) </li>
 <li> <a href='https://scholar.google.com/citations?user=As9gQZ0AAAAJ&hl=zh-CN'>Weihuang Liu*</a> (2021.12 - Now), Ph.D@University of Macau. (<b>AAAI 2023 Oral, CVPR 2023, CVPR 2024, PR 2024</b>)</li>
-</ul>
+</ul> -->
 
 <div id="Misc" class='xtitle' > Misc</div>
 <ul style='list-style: none;line-height: 2em;padding-left: 0; margin-top:0px'>
