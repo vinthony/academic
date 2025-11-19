@@ -1,0 +1,348 @@
+---
+layout: default
+---
+
+
+<style type="text/css">
+    .container{
+      max-width: 900px !important;
+    }
+    body{
+        font-family: Optima, "Times New Roman", Times, serif;
+        font-weight: 200;
+        font-size: 16px;
+        /*background-color: rgb(43, 60, 197);*/
+        /*color: rgb(0, 79, 241);*/
+        /*color: white;*/
+        border-top:5px solid #6059f5aa;
+        border-bottom:5px solid #6059f5aa;
+    }
+    b{
+      color: #e37133;
+    }
+    .posts{
+        /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+        font-size: 14px;
+
+    }
+    .news{
+      margin-top: 0;
+      line-height: 1.5em;
+    }
+    .post{
+      border-left: 5px solid #6059f5aa;
+    }
+    .xtitle{
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 24px;
+        margin-top: 15px;
+        font-weight: 400;
+        color: #e37133;
+    }
+
+    .posts .teaser{
+      align:center;
+      width: 100%;
+/*      height: 20%;*/
+      overflow: hidden;
+/*        width: 200px;*/
+/*        height: 350px;*/
+        height: 50%;
+        float: left;
+        margin: 0 0 0 10px;
+    }
+
+    .posts .teaser-left{
+    margin: 0 auto;
+    max-width:300px;
+    max-height:150px;
+    display: block;
+    width: auto;
+    height: auto;
+    }
+
+    .teaser-container{
+    float: left;
+    width: 300px;
+    height: 180px;
+
+    margin-right: 20px;
+    margin-left: 20px;
+    }
+
+    .post-hidden{
+      display: none;
+    }
+
+    a{
+      color: #e37133;
+      position: relative;
+    }
+
+    .user-info a{
+      color: #333;
+    }
+    .user-info a:after{
+      content: '';
+      position: absolute;
+      top: 60%;
+      left: -0.1em;
+      right: -0.1em;
+      bottom: 0;
+      transition:top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+      /*background-color: rgba(225, 166, 121, 0.5);*/
+      background-color: rgba(255,211,30, 0.5);
+    }
+
+    .authors-entry a {
+      color: #666
+    }
+
+    .emojilink:after{
+      background-color: rgba(255,211,30, 0.0)
+      /*rgba(225, 166, 121, 0.0);*/
+    }
+    a:hover{
+      color:rgb(255, 180, 240);
+    }
+    a:hover:after{
+      color:rgb(255, 180, 240);
+      /*color: #111;*/
+      top:0%;
+    }
+    .xcode a:after{
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition:top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+      /*background-color: rgba(225, 166, 121, 0.5);*/
+      background-color: #fff;
+    }
+    .xcode a:hover:after{
+      color: #fff;
+      /*color: #111;*/
+    }
+    .entry{
+        position: relative;
+        top:0;
+        left: 20px;
+        margin-top: 5px;
+    }
+
+    .posts > .post{
+        border-bottom: 0;
+        padding-bottom:0em;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+    .papertitle{
+        margin-top: 0px;
+        font-weight: 600;
+        font-size:16px;
+        font-style: italic;
+        /*font-style: italic;*/
+        /*height: 2.6em*/
+    }
+
+</style>
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+    $('#vis_teaser').on('click', function(){
+        $('.unimportant').toggleClass('post-hidden')
+   });
+});
+</script>
+
+<div class='user-info'>
+
+<img style="width: 120px;float: left;" src="images/xiaodong_square.jpeg" alt="">
+
+<div style="position: relative; left:40px; top:10px">
+<!-- <div style="float:right; padding-right:50px"><img src="images/greatbay.png"/></div> -->
+<div style="font-size:24px;font-weight: 400">Xiaodong Cun（寸晓东）</div>
+<div>Assistant Professor</div>
+<div>Great Bay University, Dongguan, China</div>
+<!-- <div>Address: No. 16, University Road, Songshan Lake, Dongguan, Guangdong, China</div> -->
+Email (cun AT gbu.edu.cn)  / <a target="_blank" href="https://scholar.google.com/citations?user=p42qwXcAAAAJ">Google Scholar</a> / <a target="_blank" href="https://github.com/vinthony">Github</a> / <a target="_blank" href="https://www.zhihu.com/people/vinthony">ZhiHu</a> /
+<a target="_blank" href="./images/resume.pdf">CV</a> / <a target="_blank" href="https://www.gbu.edu.cn/detail/article/1013">Official Homepage</a> / <a target="_blank" href="https://gvclab.github.io">GVC Lab</a>
+<!-- # / <span class="xcode"> Designer, P.M., Engineer of <a href="https://discord.gg/rrayYqZ4tf"><img style="vertical-align:sub;" src="https://dcbadge.vercel.app/api/server/rrayYqZ4tf?style=flat" /></a> . </span> -->
+
+</div>
+</div>
+<br>
+
+
+<div style="text-align: justify;clear: both;" >
+      I am currently a tenure-track assistant professor in the <a href="https://www.gbu.edu.cn/menu/177">SCIT(Computer Science) </a>, <a href="https://www.gbu.edu.cn/" target="_blank">Great Bay University</a> since 2024.09.
+      I received my M.S and Ph.D. degrees from the <a href="https://www.cis.um.edu.mo/">Department of Computer and Information Science, FST</a>, <a target="_blank" href="http://um.edu.mo/">University of Macau</a>, under the supervision of Prof. <a target="_blank" href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun</a> in 2018 and 2021 respectively. I received my B.Sc degree in Computer Science from <a target="_blank" href="https://en.xidian.edu.cn/">Xidian University</a>.
+      My main research interests include Visual Computing, Computational Photography, with the intersection of Computer Vision and Graphics.
+
+</div>
+<div style="text-align: justify;clear: both;">
+
+</div>
+<div style="background-color:#efefef;color:#eb002a; border: 2px solid #333; padding:5px;">
+  <img style="width: 37%;text-align:center;display:inline-block;float:right" src="images/gvc_logo.png">
+  <span>I am building <a href="http://gvclab.github.io"> Geneartive & intelligent Visual Computing Lab (GVC Lab)</a>, a new research lab at <a href="https://www.gbu.edu.cn/">Great Bay University</a>. Our lab studies Visual Computing,
+    with the goal of building intelligent machines that for creators and ordinary users.
+   </span> <br> Several positions are <a href="http://gvclab.github.io/opening/">available 🔥 🔥</a>, please drop me an Email if you are interested. 
+</div>
+
+<div id="News" class='xtitle'  >News</div>
+<ul class="news" style="line-height: 2em; overflow-y:auto; height: 200px">
+<li> 3 papers are conditional accepted by <b>SIGGRAPH Asia 2025</b>. <div style="float: right;">2025.08 </div> </li>
+<li> 1 paper is accepted by <b>ACM MultiMedia 2025</b>. <div style="float: right;">2025.07 </div> </li>
+<li> 1 paper is conditional accepted by <b>SIGGRAPH 2025</b>. <div style="float: right;">2025.03.29 </div> </li>
+<li> 3 papers are accepted by <b>CVPR 2025</b>. <div style="float: right;">2025.02 </div> </li>
+<li> MagicStick is accepted by <b>WACV 2025</b> and CustomTTT is accepted by <b>AAAI 2025</b>. <div style="float: right;">2024.12 </div> </li>
+<li> We won the 1st place in <a href="images/OSR_1st.pdf">OOD-CV: SSB Challenge 2024 (Open-Set Recognition Track)</a> at ECCV 24 Workshop.  <div style="float: right;">2024.09 </div> </li>
+<li> I officially leave Tencent (24/09/20) and join GBU (24/09/23) 🎉🎉. <div style="float: right;">2024.09 </div> </li>
+<li> <a href="https://github.com/AILab-CVC/CV-VAE">CV-VAE</a> is accepted by  <b>NeurIPS 2024</b>. <div style="float: right;">2024.09 </div> </li>
+<li>3 papers are accepted by  <b>ECCV 2024</b> and 1 paper is accepted by <b>Pattern Recognition</b>. <div style="float: right;">2024.07 </div> </li>
+<li>6 papers are accepted by  <b>CVPR 2024</b>. (🌟 <a href="https://github.com/TencentARC/SmartEdit">SmartEdit</a> has been selected as highlight paper.) <div style="float: right;">2024.02 </div> </li>
+<li>3 papers are accepted by  <b>AAAI 2024</b>, <b>ICLR 2024 (Spotlight)</b> and <b>Eurographics 2024</b>, respectively. <div style="float: right;">2023.12 </div> </li>
+<li>1 paper is accepted by <b>NeurIPS 2023</b>. <div style="float: right;">2023.09 </div> </li>
+<li>1 paper is conditionally accepted by <b>SIGGRAPH Asia 2023</b> (Conference Track). <div style="float: right;">2023.08 </div> </li>
+<li>4 papers (4/5) are accepted by <b>ICCV-23</b>. (🌟 <a href="https://fate-zero-edit.github.io/">FateZero</a> has been selected as Oral paper.) <div style="float: right;">2023.07 </div> </li>
+<li>6 papers (6/7) are accepted by <b>CVPR-23</b>. <div style="float: right;">2023.02 </div> </li>
+</ul>
+
+<div id="Activities" class='xtitle' > Education and Work Experience </div>
+<ul class="news" style="line-height: 2em">
+<li>Assistant Professor, School of Computing and Information Technology, <i>Great Bay University</i> <div style="float: right;">2024.9 - </div></li>
+<li>Senior Researcher, Visual Computing Center, <i>Tencent AI Lab</i>, lead by Dr. <a href="https://juewang725.github.io/">Jue Wang</a>, Dr. <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=zh-CN">Ying Shan</a>. <div style="float: right;">2021.9 - 2024.9 </div></li>
+<li style="color:#999">Researcher (Intern), <i>Huawei Noah's Ark Lab</i>, work with Prof. <a href="https://scholar.google.com/citations?user=sKauaAwAAAAJ&hl=zh-CN">Jianzhuang Liu</a>. <div style="float: right;">2020.3-11 </div></li>
+<li style="color:#999">Asian University Machine Learning Camp, <i>Jeju National University</i>. <div style="float: right;">2018.9</div></li>
+<li style="color:#999">Algorithm Engineer (Intern), <i>HIKVision Research Institute</i>. <div style="float: right;"><div style="float: right;">2018.5-7 </div> </div></li>
+<li style="color:#999">FrondEnd Engineer (Intern), <i>Alibaba Group</i>. <div style="float: right;">2014.7-9 </div></li>
+<li>Master & Ph.D, University of Macau, Computer Science. Supervisor: Prof. <a href="https://www.cis.um.edu.mo/~cmpun/">Chi-Man Pun</a>. <div style="float: right;">2015.8 - 2021.9 </div>  </li>
+<li>Bachelor, Xidian University, Computer Science. <div style="float: right;">2011.8 - 2015.7 </div></li>
+
+</ul>
+  <img height='63px' src="images/xidian_logo.png" /> &nbsp;&nbsp;&nbsp;&nbsp; <img src="images/um_logo.png" height="63px" /> &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="images/ai-lab.jpg" height="63px"/>&nbsp;&nbsp;&nbsp;&nbsp; <img src="images/huawei_noah.jpeg" height="63px"/>
+
+
+<div id="Publications" class='xtitle' > Research Highlight 
+  <a style="font-size: 14px; font-family: Helvetica, Arial, sans-serif;" href="https://gvclab.github.io/research/" >[Full Publications] </a> 
+  <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> (🧑‍💻 Co-first Author, 📮 Corresponding Author) </span>
+</div>
+<div class="posts">
+  {% for post in site.posts %}
+
+    {% if post.highlight %}
+    <article class="post">
+
+      <!-- <div style="position: relative; left:-50px; font-size: 18px;">{{post.year}}</div> -->
+
+      <!-- <div style="text-align:center;"><img class="teaser-img" src="{{post.teaser}}"> </div> -->
+
+      <div class= "teaser-container">
+        <img class="teaser-left"  src="{{post.teaser}}">
+      </div>
+
+      <div class= "papertitle entry" >{{ post.title }}</div>
+
+      <div class="entry authors-entry">
+        {{ post.authors }}
+      </div>
+
+      <div class="entry">
+          <i>{{post.publication}}</i>, <i>{{post.year}}</i>
+          {% if post.journal%}
+           /
+            <i>{{post.journal}}</i>, <i>{{post.year}}</i>
+          {% endif %}
+      </div>
+
+      <div class="entry user-info">
+
+        {% if post.arxiv%}
+        <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
+        {% endif %}
+
+        {% if post.demo%}
+        /
+        <a class='links' target="_blank" href="{{ post.demo }}" rel="paperurl">Online Demo</a>
+        {% endif %}
+
+        {% if post.project%}
+        /
+        <a class='links' target="_blank" href="{{ post.project }}" rel="paperurl">Project Page</a>
+        {% endif %}
+
+        {% if post.code%}
+        /
+        <a target="_blank" href="{{post.code}}">Github</a>
+        {% endif %}
+
+        {% if post.code%}
+        <div style="display: inline-block;float:right" class="xcode">
+        <!-- <a class="github-button" href="{{post.code}}" data-show-count="true">Star</a>  -->
+          <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
+        </div>
+        {% endif %}
+
+        <br>
+        <i style='display:inline-block;margin-top: 5px'>{{post.highlight_reason}}</i>
+
+        </div>
+      <div style ="clear:both"></div>
+      <!-- <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a> -->
+    </article>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div id="Misc" class='xtitle' >Talks</div>
+<ul style='line-height: 2em; margin-top:0px'>
+<li> 2025.08.21, <a href="https://mp.weixin.qq.com/s/hv8I38-EGhh1kRAfxybE5A"> Acceleration of Video Diffusion Model</a>,VIVO VCAN Talk.  </li>
+<li> 2025.08.16, <a href="https://www.fst.um.edu.mo/event/the-magic-of-video-diffusion-model-from-cinemagraph-to-short-story-generation/">The Magic of Video Diffusion Model: from cinemagraph to Short Story Generation</a>, University of Macau.  </li>
+<li> 2025.08.07, Towards Cinematic Video Generation, Tencent ARC Lab.  </li>
+<li> 2025.07, GBU AI Talk.  </li>
+<li> 2025.05.30, Video Animation and Relighting, VIVO Blue Talk. </li>
+<li> 2023.9.30, Applications of AIGC, Kwai (Kuaishou) Technology. Hosted by Dr. <a href="https://www.xtao.website/"> Xin Tao</a>. </li>
+<li> 2023.6.30, AIGC related Applications, HIT SZ. Hosted by <a href="https://sunbowliu.github.io/">Prof. Xuebo Liu</a>.  </li>
+<li> 2023.6.16, <a href="https://www.fst.um.edu.mo/event/unlocking-the-ability-of-large-text-to-image-model-new-applications-and-new-opportunities/">Unlocking the ability of large text-to-image model: new applications and new opportunities</a>, University of Macau. Hosted by <a href="https://www.cis.um.edu.mo/~cmpun/">Prof. Chi-Man Pun</a>. </li>
+</ul>
+
+<!-- 
+<div id="Academic Services" class='xtitle' > Previous Interns <span style="color:#333;font-size: 14px; font-family: Helvetica, Arial, sans-serif; "> ( * indicate their first top-tier paper through cooperation ) </span> </div>
+<ul style='line-height: 2em;  margin-top:0px' >
+<li> <a href="https://zhendongwang6.github.io/">Zhendong Wang*</a> (2020/21), HIT(SZ). Co-Supervised w/ <a href="https://people.ucas.ac.cn/~jzliu?language=en">Prof. Jianzhuang Liu</a> @ Huawei Noah's Ark Lab  (<b>CVPR 2022</b>) </li>
+<li> Jingtang Liang* (2021.03 - 2021.09), Master@University Macau.  (<b>ECCV 2022</b>) </li>
+<li> Kun Chen* (2021.10 - 2022.06), Master@Xidian University ➡️ Ph.D@Xidian University. (<b>SIGGRAPH Asia 2022</b>) </li>
+<li> Wenxuan Zhang* (2021.12 - 2022.12), Master@XJTU ➡️ Ph.D@XJTU. (<b>CVPR 2023</b>)</li>
+<li> <a href="https://cxh.netlify.app/">Xuhang Chen*</a> (2021.10 - 2022.10), Ph.D@University of Macau (<b>ICASSP 2023</b>, <b>ICCV 2023</b>) </li>
+<li> Yihao Zhi* (2022.08 - 2023.03), Master@Shanghai Tech University ➡️ Ph.D@CUHK-SZ (<b>ICCV 2023</b>) </li>
+<li> <a href="https://chenyangqiqi.github.io/">Chenyang Qi</a> (2022.12 - 2023.05), Ph.D@HKUST (<b>ICCV 2023 Oral</b>) </li>
+<li> <a href="https://vvictoryuki.github.io/website/">Jiwen Yu</a> (2023.04 - 2024.01), Master@Peking University ➡️ Ph.D@HKU (<b>ECCV 2024 Submission</b>) </li>
+<li> <a href="https://scholar.google.com/citations?user=WWb7Y7AAAAAJ&hl=zh-CN&oi=sra">Yaofang Liu*</a> (2023.07 - 2024.01), Ph.D@City University of Hong Kong (<b>CVPR 2024</b>)</li>
+<li> <a href="https://myniuuu.github.io/">Muyao Niu</a> (2023.12 - 2024.06), Master@Tokyo University (<b>ECCV 2024</b>) </li>
+<li> <a href="https://mayuelala.github.io/">Yue Ma</a> (2022.12 - 2023.10), Master@Tsinghua University ➡️ Ph.D@HKUST (<b>AAAI 2024, WACV 2024</b>) </li>
+<li> Yudian Zheng* (2023.07 - Now), Master@Saarland University ➡️ Ph.D@University of Macau (<b>Eurographics 2024</b>) </li>
+<li> <a href='https://scholar.google.com/citations?user=As9gQZ0AAAAJ&hl=zh-CN'>Weihuang Liu*</a> (2021.12 - Now), Ph.D@University of Macau. (<b>AAAI 2023 Oral, CVPR 2023, CVPR 2024, PR 2024</b>)</li>
+</ul> -->
+
+<div id="Misc" class='xtitle' > Misc</div>
+<ul style='list-style: none;line-height: 2em;padding-left: 0; margin-top:0px'>
+<li>🎓 &nbsp;&nbsp;If you are looking for talent <span style="text-decoration:line-through">student</span> professor on Machine Translation, please checkout my friend <a target="_blank" href="https://sunbowliu.github.io/">Xuebo Liu</a>. </li>
+<li>🎴 &nbsp;&nbsp;Level 19 (failed to level 20) in <a target="_blank" href="https://store.steampowered.com/app/646570/Slay_the_Spire/">Slay the Spire</a>. More than 10k death in <a href="http://www.celestegame.com/" target="_blank">Celeste</a>. </li>
+<li>🏃 &nbsp;&nbsp;Workout often & lose weight <span style="text-decoration:line-through">10kg</span> 7.5kg & 200+ hours in <a target="_blank" href="https://www.nintendo.com/games/detail/fitness-boxing-switch/" >Fitness Boxing</a> </li>
+<li>🎮 &nbsp;&nbsp;Cloud player of <a href="https://www.dota2.com/home">DOTA 2</a>, ancient player of <a href="https://en.wikipedia.org/wiki/FreeStyle_Street_Basketball">Freestyle</a>, just ordinary player. </li>
+<li>👨‍💻 &nbsp;&nbsp;Out of fashion front-end engineer. Try this website template at <a target="_blank" href="https://github.com/vinthony/academic">Github</a>.</li>
+<li>💪 &nbsp;&nbsp;I also (try to) practice <a href="http://slow-science.org/">Slow Science</a>, inspired by <a href="https://people.eecs.berkeley.edu/~efros/">Alexei (Alyosha) Efros</a>. </li>
+<li>🌈 &nbsp;&nbsp;The color of this page is <a href="https://en.wikipedia.org/wiki/Herm%C3%A8s">Hermes Orange</a>.  </li>
+<li>💵 &nbsp;&nbsp;Lose the wallet of 0.2 <a target="_blank" href="https://www.google.com.hk/search?q=btc&rlz=1C5CHFA_enUS903US903&oq=btc&aqs=chrome.0.69i59j35i39j0l3j69i60l2j69i61.1806j1j1&sourceid=chrome&ie=UTF-8"> BTC</a> in 2013. </li>
+<li>☕️ &nbsp;&nbsp;A big fan of Coffee and Tea. </li>
+<li><a class='emojilink' target="_blank" href="https://vinthony.github.io/academicpages.github.io/talkmap.html">❤️</a> &nbsp;&nbsp;Since 2019.4.13 </li>
+</ul>
