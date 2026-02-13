@@ -4,605 +4,407 @@ layout: default
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Fira+Code:wght@400;500&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <style type="text/css">
     :root {
-        /* 蓝粉色调配置 Blue & Pink Theme */
-        --bg-color: #f0f8ff;      /* 浅爱丽丝蓝背景 */
-        --text-color: #0e1011;
-        --border-width: 3px;
-        --shadow-offset: 5px;
-        
-        --primary-border: var(--border-width) solid #000000;
-        --hard-shadow: var(--shadow-offset) var(--shadow-offset) 0px #000000;
-        
-        /* 核心颜色变量 */
-        --accent-pink: #ff9ff3;       /* 亮粉色 - 用于高亮 */
-        --accent-cyan: #00d2d3;       /* 青蓝色 - 用于链接Hover */
-        --accent-soft-pink: #feca57;  /* 这里的黄色改为偏暖色或保留黄色作为撞色，这里保留一点黄色作为强调 */
-        --accent-soft-blue: #54a0ff;  /* 柔和蓝 - 用于背景块 */
-        --accent-lavender: #a29bfe;   /* 淡紫色 - 辅助色 */
+        /* 爱马仕橙与深海蓝 - 经典撞色 */
+        --theme-orange: #e37133;
+        --theme-navy: #0f172a;
+        --theme-text: #334155;
+        --theme-bg: #fffaf7; /* 极淡的暖调背景，比纯白更有温度 */
+        --theme-border: #e2e8f0;
+        --font-hand: 'Caveat', cursive;
+    }
+
+    /* 选中文本时的颜色 - 细节 */
+    ::selection {
+        background: var(--theme-orange);
+        color: #fff;
     }
 
     body {
-        font-family: 'DM Sans', monospace;
-        font-weight: 400;
-        font-size: 15px;
-        background-color: var(--bg-color);
-        color: var(--text-color);
+        font-family: 'Inter', -apple-system, sans-serif;
+        background-color: var(--theme-bg);
+        color: var(--theme-text);
+        font-size: 16px;
+        line-height: 1.7;
         margin: 0;
-        padding: 20px;
-        line-height: 1.6;
-        /* 添加一点点噪点纹理让背景不那么单调 */
-        background-image: radial-gradient(#54a0ff 1px, transparent 0);
-        background-size: 20px 20px;
+        padding: 0;
+        background-image: radial-gradient(#e37133 0.5px, transparent 0);
+        background-size: 40px 40px; /* 极淡的波点纹理，增加空气感 */
     }
 
-    /* Main Container */
-    .container {
-        max-width: 960px !important;
-        margin: 0 auto;
-        background: #ffffff;
-        border: var(--primary-border);
-        box-shadow: var(--hard-shadow);
-        padding: 40px;
-        border-radius: 0;
-    }
-
-    /* Typography - Titles */
-    .xtitle {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 28px;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-top: 50px;
-        margin-bottom: 10px;
-        padding: 10px 15px;
-        background-color: var(--accent-soft-blue); /* 标题改为蓝色 */
-        color: #000; /* 黑色字 */
-        border: var(--primary-border);
-        box-shadow: var(--hard-shadow);
-        display: inline-block;
-        width: auto;
-        transform: rotate(-1deg);
-    }
-
-        /* 定义上浮淡入关键帧 */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* 应用到主容器 */
-    .container {
-        animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-
-        /* 定义悬浮关键帧 */
-    @keyframes floatAvatar {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-6px); } /* 上下浮动6像素 */
-    }
-
-    .user-info .avatar {
-        /* 6秒完成一次循环，无限循环，缓动效果 */
-        animation: floatAvatar 6s ease-in-out infinite; 
-    }
-        /* 定义脉冲关键帧 */
-    @keyframes gentlePulse {
-        0% { transform: scale(1); box-shadow: var(--hard-shadow); }
-        50% { transform: scale(1.01); box-shadow: 7px 7px 0 #000; } /* 稍微变大一点点，阴影加深 */
-        100% { transform: scale(1); box-shadow: var(--hard-shadow); }
-    }
-
-    .highlight-box {
-        /* 3秒一次，无限循环 */
-        animation: gentlePulse 3s ease-in-out infinite;
-    }
-
-    /* 鼠标放上去时暂停动画，避免干扰阅读 */
-    .highlight-box:hover {
-        animation-play-state: paused;
-    }
-    b {
-        font-weight: 700;
-        background-color: var(--accent-pink); /* 强调文字改为粉色背景 */
-        padding: 0 4px;
-        color: #000 !important;
-        margin: 0 5px;
-    }
-
-    /* Links */
     a {
-        color: #000;
+        color: var(--theme-navy);
         text-decoration: none;
-        font-weight: 700;
-        border-bottom: 2px solid #000;
+        border-bottom: 1px solid rgba(227, 113, 51, 0.3);
         transition: all 0.2s ease;
-        background: linear-gradient(to top, var(--accent-soft-pink) 20%, transparent 20%); /* 粉色下划线效果 */
     }
-
-    @keyframes slideInTitle {
-        from {
-            opacity: 0;
-            transform: translateX(-30px) rotate(-1deg); /* 保持原有的旋转 */
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0) rotate(-1deg);
-        }
-    }
-
-    .xtitle {
-        /* 依次延迟出现，看起来更有节奏感 */
-        animation: slideInTitle 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
-    }
-
-    /* 给不同的标题加一点延迟，形成阶梯效果 */
-    #News { animation-delay: 0.2s; }
-    #Activities { animation-delay: 0.3s; }
-    #Publications { animation-delay: 0.4s; }
-    #Misc { animation-delay: 0.5s; }
 
     a:hover {
-        background-color: var(--accent-cyan); /* Hover 变青色 */
-        color: #000;
-        box-shadow: 2px 2px 0 #000;
-        text-decoration: none;
-        background-image: none;
+        color: var(--theme-orange);
+        border-bottom-color: var(--theme-orange);
+        background-color: rgba(227, 113, 51, 0.05);
     }
 
-    /* 针对所有包含 img 的 a 标签 */
-    a:has(img) {
-        border-bottom: none !important;       /* 去除下划线 */
-        background: none !important;          /* 去除粉色渐变背景 */
-        padding: 0 !important;                /* 去除内边距 */
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px 20px 100px;
+        background: rgba(255, 255, 255, 0.95); /* 毛玻璃背景卡片感 */
+        box-shadow: 0 0 40px rgba(0,0,0,0.03);
+        min-height: 100vh;
     }
 
-    /* 针对所有包含 img 的 a 标签的 Hover 状态 */
-    a:has(img):hover {
-        background-color: transparent !important; /* 去除 Hover 时的背景色 */
-        box-shadow: none !important;              /* 去除 Hover 时的方块阴影 */
-        transform: none !important;               /* 去除 Hover 时的位移震动效果 */
-        filter: none !important;                  /* 防止图片本身变色（如果其他地方定义了） */
+    /* === Header With Personality === */
+    .header-grid {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .avatar-wrapper {
+        position: relative;
+    }
+
+    .avatar {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50% 40% 40% 50% / 50% 50% 40% 40%; /* 不规则圆形，更有机 */
+        border: 3px solid var(--theme-navy);
+        transition: all 0.4s ease-in-out;
+        z-index: 2;
+        position: relative;
+    }
+
+    .avatar:hover {
+        border-color: var(--theme-orange);
+        transform: scale(1.05) rotate(3deg);
+        border-radius: 50%;
+    }
+
+    /* 头像旁边的手写体标签 */
+    .hand-note {
+        font-family: var(--font-hand);
+        color: var(--theme-orange);
+        font-size: 24px;
+        position: absolute;
+        top: -10px;
+        right: -20px;
+        transform: rotate(15deg);
+        opacity: 0.8;
+    }
+
+    .name-block h1 {
+        font-family: 'Playfair Display', serif;
+        margin: 0;
+        color: var(--theme-navy);
+        line-height: 1;
     }
     
-    .user-info a:has(img){
-        border-bottom: none !important;       /* 去除下划线 */
-        background: none !important;          /* 去除粉色渐变背景 */
-        padding: 0 !important;                /* 去除内边距 */
-        border:none;
-        box-shadow: none;
+    .name-block .cn-name {
+        font-family: "PingFang SC", serif;
+        font-weight: normal;
+        font-size: 24px;
+        color: var(--theme-orange);
     }
 
-    /* User Info Section */
-    .user-info {
-        display: flex;
-        gap: 30px;
-        align-items: flex-start;
-        border-bottom: var(--primary-border);
-        padding-bottom: 30px;
-        margin-bottom: 30px;
-    }
-
-    .user-info .avatar {
-        border: var(--primary-border);
-        box-shadow: var(--hard-shadow);
-        width: 220px !important;
-        height: auto;
-        float: none !important;
-        background: #fff;
-    }
-
-    .user-info-text {
-        flex: 1;
-    }
-
-    .user-name {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 32px;
-        font-weight: 900;
-        background-color: var(--accent-pink); /* 名字背景改为粉色 */
-        border: var(--primary-border);
-        box-shadow: 4px 4px 0 #000;
-        padding: 5px 15px;
+    .role-badge {
         display: inline-block;
-        margin-bottom: 15px;
-        color: #000;
-    }
-
-    /* Override default link styles in user info */
-    .user-info a, .link-btn {
-        display: inline-block;
-        background: #fff;
-        border: 2px solid #000;
-        padding: 2px 8px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        font-size: 13px;
-        box-shadow: 3px 3px 0 #000;
-        text-transform: uppercase;
-        border-bottom: 2px solid #000;
-        background-image: none; /* Remove gradient */
-    }
-
-    .user-info a:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 5px 5px 0 #000;
-        background-color: var(--accent-soft-blue); /* 按钮Hover变蓝 */
-    }
-    
-    .user-info a:after { content: none !important; }
-
-    /* Intro Text */
-    .intro-text {
-        text-align: justify;
-        clear: both;
-        font-size: 16px;
+        /* background: var(--theme-navy); */
+        color: var(--theme-orange);
+        padding: 4px 0px;
+        border-radius: 20px;
+        margin-top: 15px;
         margin-bottom: 20px;
     }
 
-    /* Lab/Recruitment Box */
-    .highlight-box {
-        background-color: var(--accent-lavender) !important; /* 实验室框改为淡紫色 */
-        color: #000 !important;
-        border: var(--primary-border) !important;
-        box-shadow: var(--hard-shadow);
-        padding: 20px !important;
+    .intro {
+        font-size: 17px;
+        color: #475569;
+    }
+
+    /* === Social Buttons as "Pills" === */
+    .social-pills {
         display: flex;
-        align-items: center;
-        gap: 20px;
-        margin: 30px 0;
-        transition: transform 0.2s;
-    }
-
-    .highlight-box:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 7px 7px 0 #000;
-    }
-
-    .highlight-box img {
-        border: 2px solid #000;
-        background: #fff;
-        float: none !important;
-        width: 100px !important;
-    }
-
-    /* Lists (News, Talks) */
-    ul.news {
-        list-style: none;
-        padding: 0;
-        border: var(--primary-border);
-        background: #fff;
-        padding: 20px;
-        height: 300px !important;
-        overflow-y: auto;
-    }
-
-    ul.news li {
-        border-bottom: 1px solid #000;
-        padding: 10px 0;
-        /* display: flex; */
-        /* justify-content: space-between; */
-    }
-
-    ul.news li:last-child { border-bottom: none; }
-
-    /* Logos */
-    .logo-row {
-        display: flex;
-        gap: 20px;
-        margin: 30px 0;
+        gap: 10px;
+        margin-top: 20px;
         flex-wrap: wrap;
-        justify-content: center;
-        border: 2px dashed #000;
-        padding: 20px;
-        background: #ffffff;
-    }
-    .logo-row img {
-        height: 60px;
-        filter: grayscale(100%) contrast(120%);
-        transition: filter 0.2s;
-    }
-    .logo-row img:hover {
-        filter: none;
-    }
-
-    /* Publications (Posts) */
-    .posts .post {
-        display: flex;
-        flex-direction: row;
-        background: #fff;
-        border: var(--primary-border);
-        margin-bottom: 30px;
-        box-shadow: var(--hard-shadow);
-        padding: 0;
-        transition: transform 0.2s;
-    }
-
-    .posts .post:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 7px 7px 0 #000;
-        /* Hover 时边框颜色不变，但阴影更深 */
-    }
-
-    .teaser-container {
-        flex: 0 0 250px;
-        border-right: var(--primary-border);
-        margin: 0 !important;
-        background: var(--bg-color); /* 图片背景与页面背景一致 */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        float: none !important;
-        height: auto !important;
-        width: auto !important;
-    }
-
-    .posts .teaser-left {
-        max-width: 100%;
-        height: auto;
-        border: 2px solid #000;
-    }
-
-    .post-content-wrapper {
-        padding: 20px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .papertitle {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        font-style: normal !important;
-        margin-bottom: 10px;
-        color: #000;
-    }
-
-    .entry.authors-entry {
-        font-family: 'Space Mono', monospace;
-        font-size: 14px;
-        color: #333;
-        margin-bottom: 10px;
-    }
-
-    /* Publication Buttons */
-    .entry.user-info {
-        border: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
-
-    .entry.user-info .links {
-        background: #fff;
-        border: 1px solid #000;
-        padding: 2px 6px;
-        font-size: 12px;
-        text-transform: uppercase;
-        box-shadow: 2px 2px 0 #000;
-    }
-
-    .entry.user-info a:hover {
-        background: var(--accent-pink); /* 论文按钮 hover 变粉色 */
-        color: #000;
-        background-image: none;
-    }
-
-    /* Github Star Badge Wrapper */
-    .xcode {
-        float: none !important;
-        display: inline-block;
-        margin-left: 10px;
-        vertical-align: middle;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        .user-info { flex-direction: column; text-align: center; }
-        .user-info img { margin: 0 auto; }
-        .posts .post { flex-direction: column; }
-        .teaser-container { border-right: none; border-bottom: var(--primary-border); width: 100% !important; }
-        .highlight-box { flex-direction: column; text-align: center; }
-        .logo-row { justify-content: center; }
     }
     
-    .post-hidden{ display: none; }
+    .pill {
+        padding: 5px 15px;
+        border: 1px solid #cbd5e1;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--theme-text);
+        border-bottom: 1px solid #cbd5e1; /* Override global a style */
+    }
+    
+    .pill:hover {
+        border-color: var(--theme-navy);
+        background: var(--theme-navy);
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    /* === Section Styling === */
+    .section-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 26px;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        color: var(--theme-navy);
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .section-title span {
+        font-family: var(--font-hand);
+        font-size: 20px;
+        color: var(--theme-orange);
+        opacity: 0.8;
+    }
+
+    /* === Quote Block (Slow Science) === */
+    .quote-box {
+        border-left: 4px solid var(--theme-orange);
+        background: #fff3eb;
+        padding: 20px 30px;
+        margin: 40px 0;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        font-size: 18px;
+        color: var(--theme-navy);
+        position: relative;
+    }
+    
+    .quote-box::before {
+        content: "“";
+        font-size: 60px;
+        color: rgba(227, 113, 51, 0.2);
+        position: absolute;
+        top: -10px;
+        left: 10px;
+    }
+
+    /* === Publications === */
+    .pub-item {
+        margin-bottom: 35px;
+        display: flex;
+        gap: 25px;
+        align-items: flex-start;
+    }
+    
+    .pub-teaser {
+        width: 250px;
+        border-radius: 6px;
+        overflow: hidden;
+        box-shadow: 4px 4px 0 var(--theme-navy); /* 复古硬阴影 */
+        border: 2px solid var(--theme-navy);
+        transition: transform 0.2s;
+        flex-shrink: 0;
+    }
+    
+    .pub-teaser img {
+        display: block;
+        width: 100%;
+    }
+    
+    .pub-item:hover .pub-teaser {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0 var(--theme-navy);
+    }
+
+    .pub-info h3 {
+        margin: 0 0 8px 0;
+        font-size: 17px;
+        line-height: 1.4;
+    }
+    
+    .pub-tags {
+        font-family: 'Fira Code', monospace;
+        font-size: 12px;
+        margin-top: 8px;
+    }
+    
+    .tag {
+        margin-right: 12px;
+        text-transform: uppercase;
+        color: var(--theme-orange);
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    /* === The "Life" Grid (Misc) === */
+    .life-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .life-card {
+        background: #fff;
+        border: 1px solid var(--theme-border);
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 14px;
+        transition: transform 0.2s;
+    }
+    
+    .life-card:hover {
+        border-color: var(--theme-orange);
+        transform: translateY(-3px);
+    }
+    
+    .life-icon {
+        font-size: 24px;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+        .header-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        .avatar-wrapper {
+            margin: 0 auto;
+            width: 180px;
+        }
+        .social-pills {
+            justify-content: center;
+        }
+        .pub-item {
+            flex-direction: column;
+        }
+        .pub-teaser {
+            width: 100%;
+        }
+    }
 </style>
 
-<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-<script async defer src="https://buttons.github.io/buttons.js"></script>
+<div class="container">
 
-<script type="text/javascript">
-
-$(function(){
-    $('#vis_teaser').on('click', function(){
-        $('.unimportant').toggleClass('post-hidden')
-   });
-});
-</script>
-
-<div class='user-info'>
-    <img class='avatar' src="images/crop_face.jpg" alt="">
-
-    <div class="user-info-text">
-        <div class="user-name">Xiaodong Cun（寸晓东）</div>
-        <div style="font-weight: bold; margin-bottom: 5px;">Assistant Professor</div>
-        <div style="margin-bottom: 10px;">Great Bay University, Dongguan, China</div>
-        <div style="margin-bottom: 10px;">Email: cun AT gbu.edu.cn</div>
-        <div style="line-height: 2.2em;">
-            <a target="_blank" href="https://scholar.google.com/citations?user=p42qwXcAAAAJ">Google Scholar</a> / 
-            <a target="_blank" href="https://github.com/vinthony">Github</a> / 
-            <a target="_blank" href="./images/resume.pdf">RESUME</a> / 
-            <a target="_blank" href="https://www.gbu.edu.cn/detail/article/1013">GBU page</a> / 
-            <a target="_blank" style="background-color:#a29bfe" href="https://gvclab.github.io">GVC Lab🔥</a>
+    <header class="header-grid">
+        <div class="name-block">
+            <h1>Xiaodong Cun（寸晓东）</h1>
+            <div class="role-badge">Assistant Professor (PI) @ Great Bay University</div>
+            
+            <div class="intro" style="text-align: justify;">
+                I am currently a tenure-track assistant professor in the Great Bay University. I received my M.S and Ph.D. degrees from the Department of Computer and Information Science, University of Macau, under the supervision of Prof. Chi-Man Pun in 2018 and 2021 respectively. I received my B.Sc degree in Computer Science from Xidian University. <br> My main research interests include Visual Computing, Computational Photography, with the intersection of Computer Vision and Graphics. 
+                <br>
+                <span style="font-family: var(--font-hand); color: var(--theme-orange); font-size: 20px;">
+                    (Looking for talented students! 👇)
+                </span>
             </div>
+
+          
+        </div>
+
+        <div class="avatar-wrapper">
+            <div class="hand-note">Hi there!</div>
+            <img class="avatar" src="images/crop_face.jpg" alt="Xiaodong Cun">
+        </div>
+     
+    </header>
+
+    <div style="margin-bottom: 60px;">
+
+        <div class="social-pills">
+                <a href="http://gvclab.github.io" class="pill" style="background:var(--theme-orange); color:#fff; border-color:var(--theme-orange)">🏛 GVC Lab @ Great Bay University</a>
+                <a href="https://scholar.google.com/citations?user=p42qwXcAAAAJ" class="pill">Google Scholar</a>
+                <a href="https://github.com/vinthony" class="pill">Github</a>
+                <a href="./images/resume.pdf" class="pill">CV</a>
+                <a href="mailto:cun@gbu.edu.cn" class="pill">cun AT gbu.edu.cn </a>
+            </div>
+
+        </div>
+
+
+    <div style="background: #fdf2f8; border: 2px dashed #fbcfe8; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 40px;">
+        <span style="font-size: 20px;">🔥</span> 
+        <span style="font-weight: 600; color: #db2777;">Recruitment:</span> 
+        I am looking for self-motivated PhD students & RAs. 
+        <a href="http://gvclab.github.io/opening/" style="font-family: var(--font-hand); font-size: 18px; margin-left: 10px; border-bottom: 2px solid #db2777; color: #db2777;">Join the adventure &rarr;</a>
     </div>
-</div>
 
+    <h2 class="section-title">Latest News <span>(Updates)</span></h2>
+    <ul style="list-style: none; padding: 0; border-left: 2px solid var(--theme-border); margin-left: 10px;">
+        <li style="padding-left: 20px; margin-bottom: 15px; position: relative;">
+            <div style="position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; background: var(--theme-orange); border-radius: 50%;"></div>
+            <b>Jan 2026:</b> 3 papers accepted by ICLR 2026.
+        </li>
+        <li style="padding-left: 20px; margin-bottom: 15px; position: relative;">
+            <div style="position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; background: #cbd5e1; border-radius: 50%;"></div>
+            <b>Aug 2025:</b> 3 papers accepted by SIGGRAPH Asia 2025.
+        </li>
+        <li style="padding-left: 20px; margin-bottom: 15px; position: relative;">
+            <div style="position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; background: #cbd5e1; border-radius: 50%;"></div>
+            <b>Feb 2025:</b> 3 papers accepted by CVPR 2025.
+        </li>
+        <li style="padding-left: 20px; margin-bottom: 15px; position: relative;">
+            <div style="position: absolute; left: -6px; top: 6px; width: 10px; height: 10px; background: #cbd5e1; border-radius: 50%;"></div>
+            <b>Sep 2024:</b> Start my journey at Great Bay University!
+        </li>
+    </ul>
 
-<div class="intro-text" >
-      I am currently a tenure-track assistant professor in the <a href="https://www.gbu.edu.cn/menu/177">SCIT(Computer Science) </a>, <a href="https://www.gbu.edu.cn/" target="_blank">Great Bay University</a> since 2024.09.
-      I received my M.S and Ph.D. degrees from the <a href="https://www.cis.um.edu.mo/">Department of Computer and Information Science, FST</a>, <a target="_blank" href="http://um.edu.mo/">University of Macau</a>, under the supervision of Prof. <a target="_blank" href="http://www.cis.umac.mo/~cmpun/">Chi-Man Pun</a> in 2018 and 2021 respectively. I received my B.Sc degree in Computer Science from <a target="_blank" href="https://en.xidian.edu.cn/">Xidian University</a>.
-      My main research interests include Visual Computing, Computational Photography, with the intersection of Computer Vision and Graphics.
-
-</div>
-<div style="text-align: justify;clear: both;">
-
-</div>
-
-<div class="highlight-box" style="background-color:#efefef;color:#eb002a; border: 2px solid #333; padding:5px;">
-  <!-- <img src="images/gvc_logo.png"> -->
-      <span>I am building <a href="http://gvclab.github.io"> Geneartive & intelligent Visual Computing Lab (GVC Lab)</a>, a new research lab at <a href="https://www.gbu.edu.cn/">Great Bay University</a>. Our lab studies Visual Computing,
-        with the goal of building intelligent machines that for creators and ordinary users.  Several positions are <a href="http://gvclab.github.io/opening/">available 🔥 🔥</a>, please drop me an Email if you are interested.
-       </span> 
-</div>
-
-<div id="News" class='xtitle' >News</div>
-<ul class="news" style="line-height: 2em; overflow-y:auto; height: 200px">
-<li> 3 papers are accepted by <b>SIGGRAPH Asia 2025</b>. <div style="float: right;">2025.08 </div> </li>
-<li> 1 paper is accepted by <b>ACM MultiMedia 2025</b>. <div style="float: right;">2025.07 </div> </li>
-<li> 1 paper is conditional accepted by <b>SIGGRAPH 2025</b>. <div style="float: right;">2025.03.29 </div> </li>
-<li> 3 papers are accepted by <b>CVPR 2025</b>. <div style="float: right;">2025.02 </div> </li>
-<li> MagicStick is accepted by <b>WACV 2025</b> and CustomTTT is accepted by <b>AAAI 2025</b>. <div style="float: right;">2024.12 </div> </li>
-<li> We won the 1st place in <a href="images/OSR_1st.pdf">OOD-CV: SSB Challenge 2024 (Open-Set Recognition Track)</a> at ECCV 24 Workshop.  <div style="float: right;">2024.09 </div> </li>
-<li> I officially leave Tencent (24/09/20) and join GBU (24/09/23) 🎉🎉. <div style="float: right;">2024.09 </div> </li>
-<li> <a href="https://github.com/AILab-CVC/CV-VAE">CV-VAE</a> is accepted by  <b>NeurIPS 2024</b>. <div style="float: right;">2024.09 </div> </li>
-<li>3 papers are accepted by  <b>ECCV 2024</b> and 1 paper is accepted by <b>Pattern Recognition</b>. <div style="float: right;">2024.07 </div> </li>
-<li>6 papers are accepted by  <b>CVPR 2024</b>. (🌟 <a href="https://github.com/TencentARC/SmartEdit">SmartEdit</a> has been selected as highlight paper.) <div style="float: right;">2024.02 </div> </li>
-<li>3 papers are accepted by  <b>AAAI 2024</b>, <b>ICLR 2024 (Spotlight)</b> and <b>Eurographics 2024</b>, respectively. <div style="float: right;">2023.12 </div> </li>
-<li>1 paper is accepted by <b>NeurIPS 2023</b>. <div style="float: right;">2023.09 </div> </li>
-<li>1 paper is conditionally accepted by <b>SIGGRAPH Asia 2023</b> (Conference Track). <div style="float: right;">2023.08 </div> </li>
-<li>4 papers (4/5) are accepted by <b>ICCV-23</b>. (🌟 <a href="https://fate-zero-edit.github.io/">FateZero</a> has been selected as Oral paper.) <div style="float: right;">2023.07 </div> </li>
-<li>6 papers (6/7) are accepted by <b>CVPR-23</b>. <div style="float: right;">2023.02 </div> </li>
-</ul>
-
-<div id="Activities" class='xtitle' > Education and Work Experience </div>
-<ul class="news" style="line-height: 2em; height: auto !important;">
-<li>Assistant Professor, SCIT, <i>Great Bay University</i> <div style="float: right;">2024.9 - </div></li>
-<li>Senior Researcher, <i>Tencent AI Lab</i>, lead by Dr. <a href="https://juewang725.github.io/">Jue Wang</a>, Dr. <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=zh-CN">Ying Shan</a>. <div style="float: right;">2021.9 - 2024.9 </div></li>
-<li style="color:#666">Researcher (Intern), <i>Huawei Noah's Ark Lab</i>, work with Prof. <a href="https://scholar.google.com/citations?user=sKauaAwAAAAJ&hl=zh-CN">Jianzhuang Liu</a>. <div style="float: right;">2020.3-11 </div></li>
-<li style="color:#666">Asian University Machine Learning Camp, <i>Jeju National University</i>. <div style="float: right;">2018.9</div></li>
-<li style="color:#666">Algorithm Engineer (Intern), <i>HIKVision Research Institute</i>. <div style="float: right;"><div style="float: right;">2018.5-7 </div> </div></li>
-<li style="color:#666">FrondEnd Engineer (Intern), <i>Alibaba Group</i>. <div style="float: right;">2014.7-9 </div></li>
-<li>M.S.&Ph.D, University of Macau, Supervisor: Prof. <a href="https://www.cis.um.edu.mo/~cmpun/">Chi-Man Pun</a>. <div style="float: right;">2015.8 - 2021.9 </div>  </li>
-<li>Bachelor, Xidian University, Computer Science. <div style="float: right;">2011.8 - 2015.7 </div></li>
-
-</ul>
-<!-- 
-<div class="logo-row">
-  <img height='63px' src="images/xidian_logo.png" /> 
-  <img src="images/um_logo.png" height="63px" /> 
-  <img src="images/ai-lab.jpg" height="63px"/> 
-  <img src="images/huawei_noah.jpeg" height="63px"/>
-</div> -->
-
-<div id="Publications" class='xtitle' > Research Highlight 
-  <a style="font-size: 14px; font-family: 'Space Mono', monospace;" href="https://gvclab.github.io/research/" >[Full Publications] </a> 
-  <span style="color:#333;font-size: 14px; font-family: 'Space Mono', monospace; "> (🧑‍💻 Co-first, 📮 Corresponding) </span>
-</div>
-<div class="posts">
-  {% for post in site.posts %}
-
-    {% if post.highlight %}
-    <article class="post">
-
-      <div class= "teaser-container">
-        <img class="teaser-left"  src="{{post.teaser}}">
-      </div>
-
-      <div class="post-content-wrapper">
-          <div class= "papertitle entry" >{{ post.title }}</div>
-
-          <div class="entry authors-entry">
-            {{ post.authors }}
-          </div>
-
-          <div class="entry">
-              <i>{{post.publication}}</i>, <i>{{post.year}}</i>
-              {% if post.journal%}
-               /
-                <i>{{post.journal}}</i>, <i>{{post.year}}</i>
-              {% endif %}
-          </div>
-
-          <div class="entry user-info">
-
-            {% if post.arxiv%}
-            <a class='links' target="_blank" href="{{ post.arxiv_url }}" rel="paperurl">arXiv</a>
-            {% endif %}
-
-            {% if post.demo%}
-            /
-            <a class='links' target="_blank" href="{{ post.demo }}" rel="paperurl">Online Demo</a>
-            {% endif %}
-
-            {% if post.project%}
-            /
-            <a class='links' target="_blank" href="{{ post.project }}" rel="paperurl">Project Page</a>
-            {% endif %}
-
-            {% if post.code%}
-            /
-            <a class='links' target="_blank" href="{{post.code}}">Github</a>
-            {% endif %}
-
-            {% if post.code%}
-            /
-            <div style="display: inline-block;float:right" >
-            <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
+    <h2 class="section-title">Selected Works <span>(<a href="https://gvclab.github.io/research/">Find all Research here &rarr;</a>)</span></h2>
+    <div>
+        {% for post in site.posts %}
+        {% if post.highlight %}
+        <div class="pub-item">
+            <div class="pub-teaser">
+                <img src="{{post.teaser}}" alt="{{post.title}}">
             </div>
-            {% endif %}
-
-            <br>
-            <i style='display:inline-block;margin-top: 5px; color: #d63031; font-weight:bold;'>{{post.highlight_reason}}</i>
-
+            <div class="pub-info">
+                <h3><a href="{{post.url}}">{{ post.title }}</a></h3>
+                <div style="color: #64748b; font-size: 15px;">{{ post.authors }}</div>
+                <div style="margin-top: 5px;">
+                    {{post.publication}}, {{post.year}}
+                </div>
+                
+                <div class="pub-tags">
+                    {% if post.arxiv_url %} <a class="tag" href="{{ post.arxiv_url }}">PDF</a> {% endif %}
+                    {% if post.code %} <a class="tag" href="{{ post.code }}">CODE</a> {% endif %}
+                    {% if post.project %} <a class="tag" href="{{ post.project }}">WEB</a> {% endif %}
+                    {% if post.code%}
+                    <div style="display: inline-block;float:right" >
+                    <a href="{{post.code}}"><img src="https://img.shields.io/github/stars/{{post.code| replace:'https://github.com/', ''}}?style=social"/></a>
+                    </div>
+                    {% endif %}
+                    <i style='display:inline-block;margin-top: 5px; color: #d63031; font-weight:bold;'>{{post.highlight_reason}}</i>
+                </div>
             </div>
-            </div>
-        <div style ="clear:both"></div>
-    </article>
-    {% endif %}
-  {% endfor %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2 class="section-title">Offline Mode <span>(Life)</span></h2>
+    <ul style='list-style: none;line-height: 2em;padding-left: 0; margin-top:0px'>
+    <li>🎓 &nbsp;&nbsp;If you are looking for talent <span style="text-decoration:line-through">student</span> professor on Machine Translation, please checkout my friend <a target="_blank" href="https://sunbowliu.github.io/">Xuebo Liu</a>. </li>
+    <li>🎴 &nbsp;&nbsp;Level 19 (failed to level 20) in <a target="_blank" href="https://store.steampowered.com/app/646570/Slay_the_Spire/">Slay the Spire</a>. More than 10k death in <a href="http://www.celestegame.com/" target="_blank">Celeste</a>. </li>
+    <li>🏃 &nbsp;&nbsp;Workout often & lose weight <span style="text-decoration:line-through">10kg</span> 7.5kg & 200+ hours in <a target="_blank" href="https://www.nintendo.com/games/detail/fitness-boxing-switch/" >Fitness Boxing</a> </li>
+    <li>🎮 &nbsp;&nbsp;Cloud player of <a href="https://www.dota2.com/home">DOTA 2</a>, ancient player of <a href="https://en.wikipedia.org/wiki/FreeStyle_Street_Basketball">Freestyle</a>, just ordinary player. </li>
+    <li>👨‍💻 &nbsp;&nbsp;Out of fashion front-end engineer. Try this website template at <a target="_blank" href="https://github.com/vinthony/academic">Github</a>.</li>
+    <li>💪 &nbsp;&nbsp;I also (try to) practice <a href="http://slow-science.org/">Slow Science</a>, inspired by <a href="https://people.eecs.berkeley.edu/~efros/">Alexei (Alyosha) Efros</a>. </li>
+    <li>🌈 &nbsp;&nbsp;The color of this page is <a href="https://en.wikipedia.org/wiki/Herm%C3%A8s">Hermes Orange</a>.  </li>
+    <li>💵 &nbsp;&nbsp;Lose the wallet of 0.2 <a target="_blank" href="https://www.google.com.hk/search?q=btc&rlz=1C5CHFA_enUS903US903&oq=btc&aqs=chrome.0.69i59j35i39j0l3j69i60l2j69i61.1806j1j1&sourceid=chrome&ie=UTF-8"> BTC</a> in 2013. </li>
+    <li>☕️ &nbsp;&nbsp;A big fan of Coffee and Tea. </li>
+    <li><a class='emojilink' target="_blank" href="https://vinthony.github.io/academicpages.github.io/talkmap.html">❤️</a> &nbsp;&nbsp;Since 2019.4.13 </li>
+    </ul>
+    <footer style="margin-top: 80px; text-align: center; color: #94a3b8; font-size: 14px;">
+        <p style="font-family: var(--font-hand); font-size: 20px; color: var(--theme-orange);">Thanks for visiting!</p>
+        <p>&copy; 2026 Xiaodong Cun. <br> The primary color is <a href="#" style="color: var(--theme-orange)">Hermes Orange</a>.</p>
+    </footer>
+
 </div>
-
-<div id="Misc" class='xtitle' >Talks</div>
-<ul style='line-height: 2em; margin-top:0px'>
-<li> 2025.11.12, <a href="https://mp.weixin.qq.com/s?__biz=MzUxMDE4MzAzOA==&mid=2247846501&idx=2&sn=e244982521beca3eef92c5e58f2d9ff4&chksm=f84e126c3f754d4e72e0f8e695dfb4f71c8fe9818a79af2c29d711028d30a8dda6cd102d5c79&mpshare=1&scene=1&srcid=1117WRhl3UjwqCkqINb5ClAH&sharer_shareinfo=2cdadc686869d82ee7a98d2c9271ce31&sharer_shareinfo_first=2cdadc686869d82ee7a98d2c9271ce31#rd">Storized Video Generation</a>, afirstsoft.  </li>
-<li> 2025.11.11, Storized Video Generation, TencentARC Workshop.  </li>
-<li> 2025.10.29, <a href="https://mp.weixin.qq.com/s?__biz=MjM5OTA4NjEzOQ==&mid=2649694690&idx=2&sn=fb08074345a62e871ab5cb7e32c5620a&chksm=bfb12ad441b955ab949ca21e97f8e0edb05acc1f6f7ef5e4e1af4a2a9435fb9469682d7f9b06&mpshare=1&scene=1&srcid=1114Tt4FSlGi7ibsrLaM17NM&sharer_shareinfo=7aff0082455fd7f53d102683ec6a4833&sharer_shareinfo_first=60ec1989172db811545ef699b14f1cdf#rd"> Digital Human</a>,Grgbanking Talk.  </li>
-<li> 2025.08.21, <a href="https://mp.weixin.qq.com/s/hv8I38-EGhh1kRAfxybE5A"> Acceleration of Video Diffusion Model</a>,VIVO VCAN Talk.  </li>
-<li> 2025.08.16, <a href="https://www.fst.um.edu.mo/event/the-magic-of-video-diffusion-model-from-cinemagraph-to-short-story-generation/">The Magic of Video Diffusion Model: from cinemagraph to Short Story Generation</a>, University of Macau.  </li>
-<li> 2025.08.07, Towards Cinematic Video Generation, Tencent ARC Lab.  </li>
-<li> 2025.07, Storized Video Generation, GBU AI Talk.  </li>
-<li> 2025.05.30, Video Animation and Relighting, VIVO Blue Talk. </li>
-<li> 2023.9.30, Applications of AIGC, Kwai (Kuaishou) Technology. Hosted by Dr. <a href="https://www.xtao.website/"> Xin Tao</a>. </li>
-<li> 2023.6.30, AIGC related Applications, HIT SZ. Hosted by <a href="https://sunbowliu.github.io/">Prof. Xuebo Liu</a>.  </li>
-<li> 2023.6.16, <a href="https://www.fst.um.edu.mo/event/unlocking-the-ability-of-large-text-to-image-model-new-applications-and-new-opportunities/">Unlocking the ability of large text-to-image model: new applications and new opportunities</a>, University of Macau. Hosted by <a href="https://www.cis.um.edu.mo/~cmpun/">Prof. Chi-Man Pun</a>. </li>
-</ul>
-
-<div id="Misc" class='xtitle' > Misc</div>
-<ul style='list-style: none;line-height: 2em;padding-left: 0; margin-top:0px'>
-<li>🎓 &nbsp;&nbsp;If you are looking for talent <span style="text-decoration:line-through">student</span> professor on Machine Translation, please checkout my friend <a target="_blank" href="https://sunbowliu.github.io/">Xuebo Liu</a>. </li>
-<li>🎴 &nbsp;&nbsp;Level 19 (failed to level 20) in <a target="_blank" href="https://store.steampowered.com/app/646570/Slay_the_Spire/">Slay the Spire</a>. More than 10k death in <a href="http://www.celestegame.com/" target="_blank">Celeste</a>. </li>
-<li>🏃 &nbsp;&nbsp;Workout often & lose weight <span style="text-decoration:line-through">10kg</span> 7.5kg & 200+ hours in <a target="_blank" href="https://www.nintendo.com/games/detail/fitness-boxing-switch/" >Fitness Boxing</a> </li>
-<li>🎮 &nbsp;&nbsp;Cloud player of <a href="https://www.dota2.com/home">DOTA 2</a>, ancient player of <a href="https://en.wikipedia.org/wiki/FreeStyle_Street_Basketball">Freestyle</a>, just ordinary player. </li>
-<li>👨‍💻 &nbsp;&nbsp;Out of fashion front-end engineer. Try this website template at <a target="_blank" href="https://github.com/vinthony/academic">Github</a>.</li>
-<li>💪 &nbsp;&nbsp;I also (try to) practice <a href="http://slow-science.org/">Slow Science</a>, inspired by <a href="https://people.eecs.berkeley.edu/~efros/">Alexei (Alyosha) Efros</a>. </li>
-<li>🌈 &nbsp;&nbsp;The color of this page is <a href="https://en.wikipedia.org/wiki/Herm%C3%A8s">Hermes Orange</a>.  </li>
-<li>💵 &nbsp;&nbsp;Lose the wallet of 0.2 <a target="_blank" href="https://www.google.com.hk/search?q=btc&rlz=1C5CHFA_enUS903US903&oq=btc&aqs=chrome.0.69i59j35i39j0l3j69i60l2j69i61.1806j1j1&sourceid=chrome&ie=UTF-8"> BTC</a> in 2013. </li>
-<li>☕️ &nbsp;&nbsp;A big fan of Coffee and Tea. </li>
-<li><a class='emojilink' target="_blank" href="https://vinthony.github.io/academicpages.github.io/talkmap.html">❤️</a> &nbsp;&nbsp;Since 2019.4.13 </li>
-</ul>
