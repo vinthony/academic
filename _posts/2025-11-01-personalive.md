@@ -13,7 +13,7 @@ code: https://github.com/GVCLab/PersonaLive
 project: https://github.com/GVCLab/PersonaLive
 teaser: ./images/personalive.gif
 authors: Zhiyuan Li, Chi-Man Pun📮, Chen Fang, Jue Wang, <b>Xiaodong Cun</b>📮
-publication: Preprint
+publication: Computer Vision and Pattern Recognition (<b>CVPR</b>)
 highlight_reason: <b style='color:red'> Github 1k+ Star.</b>
 ---
 
